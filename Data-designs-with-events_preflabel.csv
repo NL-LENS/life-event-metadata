@@ -1,0 +1,819 @@
+altTitle,var1Label,tijdstipVarLabel
+AANVULVERGOEDPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+AANVULVERGOEDPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+ADOPTIEKINDEREN,Rinpersoon,Datum ingang familierechtelijke betrekking moeder van adoptiekind
+ADOPTIEKINDEREN,Rinpersoon,Datum ingang familierechtelijke betrekking vader van adoptiekind
+ADOPTIEKINDEREN,Rinpersoon,Jaar van adoptie/vestiging
+ADOPTIEKINDEREN,Rinpersoon,Datum van adoptie/vestiging
+AES,Rinpersoon,Year when the respondent s highest level of education or training was successfully completed
+AES,Rinpersoon,Reference month of the survey
+AES,Rinpersoon,Year of birth of the person (4 digits)
+AES,Rinpersoon,Month of birth of the person
+AES,Rinpersoon,The year in which the respondent started working in his/her current main job
+AES,Rinpersoon,Reference year
+ANWMNDBEDRAGBUS,Rinpersoon,Aanvang ANW-uitkering
+ANWMNDBEDRAGBUS,Rinpersoon,Einde ANW-uitkering
+ANWPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+ANWPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+ANWUITKERING1ATAB,Rinpersoon,Geboortedatum halfwees
+ANWUITKERING1ATAB,Rinpersoon,Ingangsdatum uitkering
+AOTOTMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarden van de variabelen geldig zijn.
+AOTOTMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot welke de waarden van de variabelen geldig zijn.
+AOTOTPERSOONBUS,Rinpersoon,Begindatum overige arbeidsongeschiktheidsuitkering
+AOTOTPERSOONBUS,Rinpersoon,Begindatum WAZ-uitkering
+AOTOTPERSOONBUS,Rinpersoon,Begindatum IVA-uitkering
+AOTOTPERSOONBUS,Rinpersoon,Begindatum WGA-uitkering
+AOTOTPERSOONBUS,Rinpersoon,Einde geldigheid
+AOTOTPERSOONBUS,Rinpersoon,Begindatum WAO-uitkering
+AOTOTPERSOONBUS,Rinpersoon,Begindatum WAJONG-uitkering
+AOTOTPERSOONBUS,Rinpersoon,Begin geldigheid
+AOTOTPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarde van de variabelen geldig zijn.
+AOTOTPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot welke de waarde van de variabelen geldig zijn.
+AOTOTUITKERINGATAB,Rinpersoon,De datum van aanvang van de uitkeringsverhouding.
+AOTOTUITKERINGATAB,Rinpersoon,De datum van het einde van de uitkeringsverhouding.
+AOTOTUITKERINGATAB,Rinpersoon,Geboortedatum uitkeringsgerechtigde.
+AOTOTUITKERINGATAB,Rinpersoon,De datum waarop de uitkering eventueel is heropend.
+AOTOTUITKERINGTAB,Rinpersoon,De datum van het einde van de uitkeringsverhouding.
+AOTOTUITKERINGTAB,Rinpersoon,De datum van aanvang van de uitkeringsverhouding.
+AOTOTUITKERINGTAB,Rinpersoon,Geboortedatum uitkeringsgerechtigde.
+AOTOTUITKERINGTAB,Rinpersoon,De datum waarop de uitkering eventueel is heropend.
+AOWMNDBEDRAGBUS,Rinpersoon,Aanvang AOW-uitkering
+AOWMNDBEDRAGBUS,Rinpersoon,Einde AOW-uitkering
+AOWPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+AOWPERSOONBUS,Rinpersoon,Begindatum AOW-uitkering
+AOWPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+AOWPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarden van de variabelen geldig zijn.
+AOWPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot en met welke de waarden van de variabelen geldig zijn.
+AOWUITKERING1ATAB,Rinpersoon,Geboortemaand partner uitkeringsgerechtigde
+AOWUITKERING1ATAB,Rinpersoon,Geboortejaar partner uitkeringsgerechtigde
+AOWUITKERING1ATAB,Rinpersoon,Ingangsdatum van de AOW-uitkering
+AOWUITKERING1ATAB,Rinpersoon,Geboortejaar uitkeringsgerechtigde
+ARBBUITLANDBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+ARBBUITLANDBUS,Rinpersoon,Aanvangsdatum inkomsten uit tegenwoordige arbeid buitenland
+ARBBUITLANDBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+ARBBUITLANDMNDBEDRAGBUS,Rinpersoon,Einddatum situatie
+ARBBUITLANDMNDBEDRAGBUS,Rinpersoon,Begindatum situatie
+AZWWNE_II,Rinpersoon,Sinds wanneer werkt u in de sector Zorg en Welzijn?
+AZWWNE_II,Rinpersoon,Sinds wanneer bent u werkzaam bij uw huidige werkgever
+BAANKENMERKENBUS,Rinpersoon,Aanvang baanid (datumsleutel)
+BAANKENMERKENBUS,Rinpersoon,Datum einde inkomstenverhouding
+BAANKENMERKENBUS,Rinpersoon,Datum aanvang inkomstenverhouding
+BAANKENMERKENBUS,Rinpersoon,Einde baanid (datumsleutel)
+BAANPRSMNDBEDRAGBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+BAANPRSMNDBEDRAGBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+BELEVINGEN,Rinpersoon,"Kunt u, als u dat wilt, zelf in enige mate de tijdstippen bepalen waarop u werkt?"
+BIGTAB,Rinpersoon,Datum uitschrijving uit BIG-register (JJJJMMDD)
+BIGTAB,Rinpersoon,Datum einde aantekening medisch specialisme (JJJJMMDD)
+BIGTAB,Rinpersoon,Datum 1e inschrijving in BIG-register (JJJJMMDD)
+BIGTAB,Rinpersoon,Datum aanvang aantekening medisch specialisme (JJJJMMDD)
+BIG_ANALYSEBESTAND,Rinpersoon,datum erkenning van het diploma van de persoon voor het betreffende beroep/specialisme
+BIJSTANDMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarden van de variabelen geldig zijn.
+BIJSTANDMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot welke de waarden van de variabelen geldig zijn.
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum Wwik-uitkering
+BIJSTANDPERSOONBUS,Rinpersoon,Begin geldigheid
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum uitkering adreslozen
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum BBZ-uitkering
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum IOAW-uitkering
+BIJSTANDPERSOONBUS,Rinpersoon,Einde geldigheid
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum Overige bijstandsuitkering
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum Bijstandsuitkering
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum uitkering inrichting
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum IOAZ-uitkering
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum Tozo
+BIJSTANDPERSOONBUS,Rinpersoon,Begindatum studietoeslag
+BIJSTANDPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarden van de variabelen geldig zijn.
+BIJSTANDPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot en met welke de waarden van de variabelen geldig zijn.
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum einde ontheffing arbeidsverplichting eerste persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum invoering administratie
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum einde uitkering van de eerste persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum einde ontheffing arbeidsverplichting tweede persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum aanvang uitkering eerste persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum aanvang uitkering tweede persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Datum einde uitkering van de tweede persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Aanvangsdatum vermindering eerste persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Einddatum vermindering eerste persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Einddatum vermindering tweede persoon
+BIJSTANDUITKERINGTAB,Rinpersoon,Aanvangsdatum vermindering tweede persoon
+BIJSTANDVORDERINGTAB,Rinpersoon,Begindatum overtreding
+BIJSTANDVORDERINGTAB,Rinpersoon,Datum besluit
+BIJSTANDVORDERINGTAB,Rinpersoon,Einddatum overtreding
+BJZAWBZTAB,Rinpersoon,Einddatum indicatie
+BJZAWBZTAB,Rinpersoon,Begindatum indicatie
+CCO,Rinpersoon,Enquêtemaand
+CCO,Rinpersoon,Enquêtedag
+CCO,Rinpersoon,Enquêtejaar
+CCO,Rinpersoon,Enquêtedatum
+CIMS,Rinpersoon,Vaccinatiedatum JJJJMMDD
+CWITAB,Rinpersoon,De aanvangsdatum (JJJJMMDD) van inschrijving bij (op dat moment geldend) Centrum voor Werk en Inkomen (CWI).
+DBCGGZOVERIGEZORGPRODUCTENTAB,Rinpersoon,Einddatum van het overige zorgproduct
+DBCGGZOVERIGEZORGPRODUCTENTAB,Rinpersoon,Begindatum van het overige zorgproduct
+DEELCERTIFICATENVAVOTAB,Rinpersoon,Datum waarop de deelcertificaten zijn behaald.
+DEELTIJDFACTORBAANBUS,Rinpersoon,Datum aanvang deeltijdfactor
+DEELTIJDFACTORBAANBUS,Rinpersoon,Datum einde deeltijdfactor
+DEMENTIEINDICATIEVEKTIS,Rinpersoon,DEMINDJAAR
+DEMENTIEINDICATIEVEKTIS,Rinpersoon,DEMINDEERSTEJAAR
+DGGBAPERSOONTAB,Rinpersoon,Geboortedatum jongste kind van de vader van de dood geboren persoon
+DGGBAPERSOONTAB,Rinpersoon,Geboortedatum oudste kind van de moeder van de doodgeboren persoon
+DGGBAPERSOONTAB,Rinpersoon,Geboortedatum jongste kind van de moeder van de doodgeboren persoon
+DGGBAPERSOONTAB,Rinpersoon,Geboortedatum dood geboren persoon
+DGGBAPERSOONTAB,Rinpersoon,Geboortedatum oudste kind van de vader van de dood geboren persoon
+DIPLOMAHOTAB,Rinpersoon,Datum waarop het diploma in het hoger onderwijs behaald is
+DIPLOMAMBOTAB,Rinpersoon,Datum waarop het mbo-diploma behaald is
+DIPLOMAVAVOTAB,Rinpersoon,Datum waarop het diploma in het voortgezet algemeen volwassenenonderwijs behaald is.
+DONORTAB,Rinpersoon,Datum van registratie
+DOODOORZTAB,Rinpersoon,Statistiekjaar
+EBBAFLTAB,Rinpersoon,Sinds welke datum werkzaam in werkkring 1
+EBBAFLTAB,Rinpersoon,sleutel EBB
+EBBARBEIDZORGTAB,Rinpersoon,sleutel EBB
+EBBARBEIDZORGTAB,Rinpersoon,Mogelijkheid tot zelf bepalen werktijden
+EBBARBZORGTAB,Rinpersoon,sleutel EBB
+EBBARBZORGTAB,Rinpersoon,Kunt u zelf in enige mate de dagelijkse of wekelijkse tijdstippen bepalen waarop u werkt?
+EBBBEDRIJFTAB,Rinpersoon,sleutel EBB
+EBBBEROEPTAB,Rinpersoon,sleutel EBB
+EBBFAMILIETAB,Rinpersoon,sleutel EBB
+EBBGELOOFTAB,Rinpersoon,sleutel EBB
+EBBHHBTAB,Rinpersoon,Geboortedatum
+EBBHHBTAB,Rinpersoon,sleutel EBB
+EBBHHKERNTAB,Rinpersoon,sleutel EBB
+EBBHISTAB,Rinpersoon,sleutel EBB
+EBBJAARHISTAB,Rinpersoon,sleutel EBB
+EBBJAARTAB,Rinpersoon,In welk jaar is persoon in deze werkkring gestopt of minder gaan werken
+EBBJAARTAB,Rinpersoon,sleutel EBB
+EBBJAARTAB,Rinpersoon,In welke maand is persoon in deze werkkring gestopt of minder gaan werken
+EBBLFSTAB,Rinpersoon,sleutel EBB
+EBBLONGTAB,Rinpersoon,sleutel EBB
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 3e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 2e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 6e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 8e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,sleutel EBB
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 1e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 2e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 2e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 8e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 7e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 6e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 1e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 1e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 5e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 5e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 8e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 6e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 7e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 5e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 4e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 7e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 8e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 6e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 4e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 2e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 4e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 7e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 3e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 1e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 4e opleiding of cursus begonnen?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 3e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welke maand bent u met de 3e opleiding of cursus gestopt?
+EBBONDBLOKTAB,Rinpersoon,In welk jaar bent u met de 5e opleiding of cursus begonnen?
+EBBONDTAB,Rinpersoon,Maand einde opleiding/cursus
+EBBONDTAB,Rinpersoon,Maand waarin een persoon gestart is met de buitenlandse opleiding
+EBBONDTAB,Rinpersoon,In welk jaar bent u met deze (huidige) opleiding/cursus begonnen?
+EBBONDTAB,Rinpersoon,sleutel EBB
+EBBONDTAB,Rinpersoon,In welke maand bent u met deze (huidige) opleiding/cursus begonnen?
+EBBONDTAB,Rinpersoon,Maand waarin een persoon gestopt is met de buitenlandse opleiding
+EBBONDTAB,Rinpersoon,Jaar waarin een persoon gestart is met de buitenlandse opleiding
+EBBONDTAB,Rinpersoon,Jaar waarin een persoon gestopt is met de buitenlandse opleiding
+EBBONDTAB,Rinpersoon,Jaar waarin de hoogst behaalde opleiding is afgerond
+EBBOPLTAB,Rinpersoon,sleutel EBB
+EBBPARTNERTAB,Rinpersoon,Sleutel EBB partner
+EBBPARTNERTAB,Rinpersoon,sleutel EBB
+EBBVRGTAB,Rinpersoon,sleutel EBB
+EBBWWZTAB,Rinpersoon,sleutel EBB
+EBWLZBUS,Rinpersoon,Begin eigen bijdrage voor Wlz zorg
+EBWLZBUS,Rinpersoon,Eind eigen bijdrage voor Wlz zorg
+EBWMOVBLBUS,Rinpersoon,Begin eigen bijdrage voor Wmo zorg met verblijf
+EBWMOVBLBUS,Rinpersoon,Eind eigen bijdrage voor Wmo zorg met verblijf
+EDIPLOMAHOTAB,Rinpersoon,Datum waarop het eerste einddiploma in het hoger onderwijs behaald is
+EERSTEDIPLOMAHOTAB,Rinpersoon,Datum waarop het eerste einddiploma in het hoger onderwijs behaald is
+EUSILC,Rinpersoon,Month of birth
+EUSILC,Rinpersoon,Year of the personal interview
+EUSILC,Rinpersoon,Month of household interview
+EUSILC,Rinpersoon,Day of household interview
+EUSILC,Rinpersoon,Month of the personal interview
+EUSILC,Rinpersoon,Year when highest level of inducation was attained
+EUSILC,Rinpersoon,Day of the personal interview
+EUSILC,Rinpersoon,Year of immigration
+EUSILC,Rinpersoon,Year of the survey
+EUSILC,Rinpersoon,Year of birth
+EUSILC,Rinpersoon,Year of household interview
+EUSILC2013_INCLRIN,Rinpersoon,Year of birth
+EUSILC2013_INCLRIN,Rinpersoon,Month of birth
+EUSILC2013_INCLRIN,Rinpersoon,Year of the survey
+EUSILC2013_INCLRIN,Rinpersoon,Month of household interview
+EUSILC2013_INCLRIN,Rinpersoon,Month of the personal interview
+EUSILC2013_INCLRIN,Rinpersoon,Year of the personal interview
+EUSILC2013_INCLRIN,Rinpersoon,Day of household interview
+EUSILC2013_INCLRIN,Rinpersoon,Year when highest level of inducation was attained
+EUSILC2013_INCLRIN,Rinpersoon,Year of household interview
+EUSILC2013_INCLRIN,Rinpersoon,Year of immigration
+EUSILC2013_INCLRIN,Rinpersoon,Day of the personal interview
+EUSILC2014_INCLRIN,Rinpersoon,Year of the survey
+EUSILC2014_INCLRIN,Rinpersoon,Year of birth
+EUSILC2014_INCLRIN,Rinpersoon,Year of household interview
+EUSILC2014_INCLRIN,Rinpersoon,Day of the personal interview
+EUSILC2014_INCLRIN,Rinpersoon,Year when highest level of inducation was attained
+EUSILC2014_INCLRIN,Rinpersoon,Month of birth
+EUSILC2014_INCLRIN,Rinpersoon,Year of immigration
+EUSILC2014_INCLRIN,Rinpersoon,Month of household interview
+EUSILC2014_INCLRIN,Rinpersoon,Day of household interview
+EUSILC2014_INCLRIN,Rinpersoon,Year of the personal interview
+EUSILC2014_INCLRIN,Rinpersoon,Month of the personal interview
+EWLBUS,Rinpersoon,Datum einde EWL-opgave
+EWLBUS,Rinpersoon,Datum aanvang EWL-opgave
+EWLBUS,Rinpersoon,Datum waarop een persoon in dienst is getreden bij een werkgever
+EWLBUS,Rinpersoon,Datum waarop een persoon uit dienst is getreden bij een werkgever
+EXAMVOJJJJINT,Rinpersoon,DATUM VAN DE EXAMENUITSLAG
+EXAMVOJJJJINT,Rinpersoon,Datum wijziging persoonsgebonden nummer
+EXAMVOJJJJINT,Rinpersoon,PEILDATUM VAN DE EXAMENS (20061001)
+EXTRAPOPULATIEPERSONENAANDACHTSGROEPENRNI,Rinpersoon,Geboortejaar geldig aan het einde van het eerste kwartaal
+EXTRAPOPULATIEPERSONENAANDACHTSGROEPENRNI,Rinpersoon,Geboortejaar geldig aan het einde van het jaar
+EXTRAPOPULATIEPERSONENAANDACHTSGROEPENRNI,Rinpersoon,Geboortejaar geldig aan het einde van het derde kwartaal
+EXTRAPOPULATIEPERSONENAANDACHTSGROEPENRNI,Rinpersoon,Geboortejaar geldig aan het einde van het tweede kwartaal
+EXTRAPOPULATIEPERSONENAANDACHTSGROEPENRNI,Rinpersoon,Geboortejaar geldig aan het begin van het jaar
+FAILONTSLAGTAB,Rinpersoon,Datum uitspraak faillissement van bedrijven met banen in het SSB
+FAILONTTAB,Rinpersoon,De datum waarop de baan als gevolg van faillissement werd beëindigd
+FAILONTTAB,Rinpersoon,De datum waarop de rechter het faillissement over het bedrijf heeft uitgesproken.
+GBAADRESBUITENLANDBUS,Rinpersoon,Aanvangsdatum buitenlands adres persoon JJJJMMDD
+GBAADRESBUITENLANDBUS,Rinpersoon,Beëindigingsdatum buitenlands adres persoon JJJJMMDD
+GBAADRESGEBEURTENISBUS,Rinpersoon,Datum van de dag voorafgaand aan de volgende verhuizing
+GBAADRESGEBEURTENISBUS,Rinpersoon,Verhuisdatum
+GBAADRESOBJECTBUS,Rinpersoon,Datum beeïndiging adresbewoning persoon
+GBAADRESOBJECTBUS,Rinpersoon,Datum aanvang adresbewoning persoon
+GBABURGERLIJKESTAATBUS,Rinpersoon,Datum waarop een burgerlijke staat van de persoon is ingegaan.
+GBABURGERLIJKESTAATBUS,Rinpersoon,Datum waarop een burgerlijke staat van de persoon is beëindigd.
+GBABURGERLIJKESTAATBUS,Rinpersoon,Geboortejaar partner
+GBABURGERLIJKESTAATBUS,Rinpersoon,Geboortemaand partner
+GBABURGERLIJKESTAATBUS,Rinpersoon,Geboortedag partner
+GBAHUISHOUDENSBUS,Rinpersoon,Beëindigingsdatum van het huishouden.
+GBAHUISHOUDENSBUS,Rinpersoon,Geboortejaar oudste thuiswonend kind in het huishouden.
+GBAHUISHOUDENSBUS,Rinpersoon,Aanvangsdatum van het huishouden.
+GBAHUISHOUDENSBUS,Rinpersoon,Geboortejaar jongste thuiswonend kind in het huishouden.
+GBAKINDBUS,Rinpersoon,Aanvangsdatum van de ouderschapssituatie
+GBAKINDBUS,Rinpersoon,Beëindigingsdatum van de ouderschapssituatie
+GBAKINDBUS,Rinpersoon,Geboortedatum van het  jongste kind van een persoon
+GBAKINDBUS,Rinpersoon,Geboortedatum oudste kind van een persoon
+GBAMIGRATIEBUS,Rinpersoon,Datum waarop migratieperiode is begonnen.
+GBAMIGRATIEBUS,Rinpersoon,Datum waarop migratieperiode is beëindigd.
+GBAMIGRATIEGEBEURTENISBUS,Rinpersoon,Datum van de dag voorafgaand aan de eerstvolgende buitenlandse migratie.
+GBAMIGRATIEGEBEURTENISBUS,Rinpersoon,Datum van buitenlandse migratie
+GBANATGEWIJZIGDENMASSABUS,Rinpersoon,Datum ingang nationaliteitswijziging
+GBANATGEWIJZIGDENMASSABUS,Rinpersoon,Datum ingang volgende nationaliteitswijziging
+GBANATIONALITEITBUS,Rinpersoon,Datum aanvang nationaliteitencombinatie persoon JJJJMMDD
+GBANATIONALITEITBUS,Rinpersoon,Datum beëindiging nationaliteitencombinatie persoon JJJJMMDD
+GBAOVERLIJDENTAB,Rinpersoon,Datum van overlijden
+GBAPERSOONTAB,Rinpersoon,Geboortedag
+GBAPERSOONTAB,Rinpersoon,Geboortejaar
+GBAPERSOONTAB,Rinpersoon,Geboortemaand
+GBAPERSOONTAB,Rinpersoon,Geboortejaar van de moeder
+GBAPERSOONTAB,Rinpersoon,Geboortedag van de moeder
+GBAPERSOONTAB,Rinpersoon,Geboortedag van de vader
+GBAPERSOONTAB,Rinpersoon,Geboortejaar van de vader
+GBASAMENWONERBUS,Rinpersoon,Datum aanvang van samenwoonperiode
+GBASAMENWONERBUS,Rinpersoon,Datum einde van samenwoonperiode
+GBASAMENWONERSBUS,Rinpersoon,Datum aanvang van samenwoonperiode
+GBASAMENWONERSBUS,Rinpersoon,Datum einde van samenwoonperiode
+GBAVERBINTENISPARTNERBUS,Rinpersoon,Datum aanvang van de verbintenis
+GBAVERBINTENISPARTNERBUS,Rinpersoon,Datum beëindiging van de verbintenis
+GBAVERWEDUWDENMASSABUS,Rinpersoon,Datum aanvang volgende verweduwing
+GBAVERWEDUWDENMASSABUS,Rinpersoon,Datum aanvang verweduwing
+GEBWLZTAB,Rinpersoon,Begindatum gebruik zorg uit de Wlz
+GEBWLZTAB,Rinpersoon,Einddatum gebruik zorg uit de Wlz
+GEBWMOTAB,Rinpersoon,Volgnummer maatwerkvoorziening per persoon
+GEBWMOTAB,Rinpersoon,Eerste dag van Wmo-maatwerkvoorziening waarvoor een lage eigen bijdrage of hoge eigen bijdrage (LEBHEB) betaald moet worden.
+GEBWMOTAB,Rinpersoon,Laatste dag van Wmo-maatwerkvoorziening waarvoor een lage eigen bijdrage of hoge eigen bijdrage (LEBHEB) betaald moet worden.
+GEBWMOTAB,Rinpersoon,Laatste dag van Wmo-zorg thuis vanuit het Abonnementstarief waarvoor een eigen bijdrage betaald moet worden.
+GEBWMOTAB,Rinpersoon,Eerste dag van Wmo-zorg thuis vanuit het Abonnementstarief waarvoor een eigen bijdrage betaald moet worden.
+GECON,Rinpersoon,Onderzoekspersoon: Afleiding: geboortejaar
+GECON,Rinpersoon,Griepprik: jaar laatste griepprik
+GECON,Rinpersoon,Roken: leeftijd waarop de respondent is gestopt met roken
+GECON,Rinpersoon,Onderzoekspersoon: Afleiding: geboortemaand
+GECON,Rinpersoon,Griepprik: maand griepprik
+GECON,Rinpersoon,Roken: leeftijd waarop de respondent is begonnen met roken
+GECON,Rinpersoon,Veldwerkperiode
+GECON,Rinpersoon,Datum interview
+GECON,Rinpersoon,Tijdstip: Enquêtedatum
+GECON,Rinpersoon,Tijdstip: Eindtijd interview (hh:mm:ss)
+GECON,Rinpersoon,Griepprik: maand laatste griepprik
+GECON,Rinpersoon,Tijdstip: Starttijd interview (hh:mm:ss)
+GECON,Rinpersoon,Tijdstip: Einddatum interview
+GECON,Rinpersoon,Tijdstip: Datum aanvang nieuwe baan
+GECON,Rinpersoon,Tijdstip: Startdatum interview
+GEMSTPLAATSBUS,Rinpersoon,Einddatum gemeentecode standplaats
+GEMSTPLAATSBUS,Rinpersoon,Aanvangsdatum gemeentecode standplaats
+GGDCOVID19BM,Rinpersoon,Tijdstip rapportage COVID-19 besmetting JJJJ-MM-DD HH:MM:SS
+GGDCOVID19BM,Rinpersoon,Datum monsterafname COVID-19 test JJJJMMDD
+GGZDBCDIAGNOSEHOOFDDIAGTAB,Rinpersoon,Datum van stellen van de diagnose
+GGZDBCDIAGNOSETAB,Rinpersoon,Datum van stellen van de diagnose
+GGZDBCGELEVERDZORGPROFIELTAB,Rinpersoon,Datum waarop de Zorgactiviteit wordt uitgevoerd.
+GGZDBCGELEVERDZORGPROFIELTAB,Rinpersoon,Datum waarop het verblijf is beëindigd.
+GGZDBCGELEVERDZORGPROFIELTAB,Rinpersoon,Datum waarop het verblijf is begonnen.
+GGZDBCTRAJECTENHOOFDDIAGTAB,Rinpersoon,Begindatum van DBC
+GGZDBCTRAJECTENHOOFDDIAGTAB,Rinpersoon,Einddatum van DBC
+GGZDBCTRAJECTENHOOFDDIAGTAB,Rinpersoon,Startdatum van het zorgtraject
+GGZDBCTRAJECTENHOOFDDIAGTAB,Rinpersoon,Einddatum van Zorgtraject
+GGZDBCTRAJECTENHOOFDDIAGTAB,Rinpersoon,Laatste Contactdatum DBC Geestelijke Gezondheidszorg
+GGZDBCTRAJECTENTAB,Rinpersoon,Einddatum van Zorgtraject
+GGZDBCTRAJECTENTAB,Rinpersoon,Begindatum van DBC
+GGZDBCTRAJECTENTAB,Rinpersoon,Startdatum van het zorgtraject
+GGZDBCTRAJECTENTAB,Rinpersoon,Einddatum van DBC
+GGZDBCTRAJECTENTAB,Rinpersoon,Laatste Contactdatum DBC Geestelijke Gezondheidszorg
+GGZDBCZRGPROFIELHOOFDDIAGTAB,Rinpersoon,Datum waarop het verblijf is beëindigd.
+GGZDBCZRGPROFIELHOOFDDIAGTAB,Rinpersoon,Datum waarop de Zorgactiviteit wordt uitgevoerd.
+GGZDBCZRGPROFIELHOOFDDIAGTAB,Rinpersoon,Datum waarop het verblijf is begonnen.
+GGZDECLVEKTIS,Rinpersoon,einddatum_prestatie
+GGZDECLVEKTIS,Rinpersoon,begindatum_prestatie
+GPE,Rinpersoon,Jaar start promotieonderzoek
+GPE,Rinpersoon,Jaar waarin doctoraat/PhD succesvol werd afgerond
+GPE,Rinpersoon,Tijdstip: Startdatum vragenlijst
+GPE,Rinpersoon,Afleiding: Academisch jaar van promoveren (gebaseerd op gegevens van universiteiten)
+GPE,Rinpersoon,Geboortejaar
+GPE,Rinpersoon,Jaar gestart met werken in deze werkkring
+GPE,Rinpersoon,Jaar in vorige/laatste werkkring gestopt met werken
+GPE,Rinpersoon,Jaar in  vorige/laatste werkkring begonnen met werken
+GPE,Rinpersoon,Startjaar in de 2e werkkring begonnen met werken
+GPE,Rinpersoon,Jaar van behalen van doctoraat
+GWUBEROEPBUS,Rinpersoon,Aanvang geldigheid registratie als Geregistreerde Werkzoekende UWV (GWU)
+GWUBEROEPBUS,Rinpersoon,Einde geldigheid registratie Geregistreerde Werkzoekende UWV (GWU)
+GWUBUS,Rinpersoon,Aanvang geldigheid registratie als Geregistreerde Werkzoekende UWV (GWU)
+GWUBUS,Rinpersoon,Einde geldigheid registratie als Geregistreerde Werkzoekende UWV (GWU)
+GWUMM,Rinpersoon,Peildatum GWUbestand
+HALTTAB,Rinpersoon,Pleegdag van het eerste Haltwaardige delict
+HALTTAB,Rinpersoon,Pleegjaar van het eerste Haltwaardige delict
+HALTTAB,Rinpersoon,Pleegmaand van het eerste Haltwaardige delict
+HDIPLOMAHBOTAB,Rinpersoon,Datum waarop het hoofddiploma in het hoger beroepsonderwijs behaald is
+HDIPLOMAWOTAB,Rinpersoon,Datum waarop het hoofddiploma in het wetenschappelijk onderwijs behaald is
+HFDBAANBUS,Rinpersoon,Einde geldigheid hoofdbaan
+HFDBAANBUS,Rinpersoon,Aanvang geldigheid hoofdbaan
+HSNRPKINDEREN,Rinpersoon,Geboortejaar van de vader
+ICTHHPERS,Rinpersoon,Datum aanvang nieuwe baan?
+ICTHHPERS,Rinpersoon,Veldwerkperiode
+ICTHHPERS,Rinpersoon,Afleiding peildatum
+INDICAWBZTAB,Rinpersoon,Einddatum indicatie JJJJMMDD
+INDICAWBZTAB,Rinpersoon,Begindatum indicatie JJJJMMDD
+INDICWLZTAB,Rinpersoon,Einddatum indicatie JJJJMMDD
+INDICWLZTAB,Rinpersoon,Begindatum indicatie JJJJMMDD
+INSCHRWPOTAB,Rinpersoon,De datum waarop de eindtoets in het (speciaal) basisonderwijs is afgenomen.
+IOWUITKERING1ATAB,Rinpersoon,De datum waarop de uitkeringsverhouding tussen de uitkerende instantie en de uitkeringsgerechtigde daadwerkelijk is beëindigd.
+IOWUITKERING1ATAB,Rinpersoon,De datum waarop de uitkeringsverhouding tussen de uitkerende instantie en de uitkeringsgerechtigde formeel is aangevangen.
+JGDBESCHERMBUS,Rinpersoon,Begindatum van de geldigheidsperiode van het record over de jeugdbescherming aan de jeugdige
+JGDBESCHERMBUS,Rinpersoon,Datum overgedragen gekregen traject jeugdbescherming
+JGDBESCHERMBUS,Rinpersoon,Einddatum van de geldigheidsperiode van het record over de jeugdbescherming aan de jeugdige
+JGDBESCHERMBUS,Rinpersoon,Datum aanvang traject jeugdbescherming
+JGDBESCHERMBUS,Rinpersoon,Datum eerste contact traject jeugdbescherming
+JGDBESCHERMBUS,Rinpersoon,Datum overgedragen traject jeugdbescherming
+JGDBESCHERMBUS,Rinpersoon,Datum beëindiging traject jeugdbescherming
+JGDHULPBUS,Rinpersoon,Datum aanvang jeugdhulp
+JGDHULPBUS,Rinpersoon,Begindatum van de geldigheidsperiode van het record over de jeugdhulp aan de jeugdige
+JGDHULPBUS,Rinpersoon,Einddatum van de geldigheidsperiode van het record over de jeugdhulp aan de jeugdige
+JGDHULPBUS,Rinpersoon,Datum einde jeugdhulp
+JGDRECLASBUS,Rinpersoon,Datum overgedragen traject jeugdreclassering
+JGDRECLASBUS,Rinpersoon,Datum eerste contact traject jeugdreclassering
+JGDRECLASBUS,Rinpersoon,Datum overgedragen gekregen traject jeugdreclassering
+JGDRECLASBUS,Rinpersoon,Einddatum van de geldigheidsperiode van het record over de jeugdreclassering aan de jeugdige
+JGDRECLASBUS,Rinpersoon,Begindatum van de geldigheidsperiode van het record over de jeugdreclassering aan de jeugdige
+JGDRECLASBUS,Rinpersoon,Datum einde traject jeugdreclassering
+JGDRECLASBUS,Rinpersoon,Datum aanvang traject jeugdreclassering
+LBZBASISTAB,Rinpersoon,Datum ontslag
+LBZBASISTAB,Rinpersoon,Ontslaguur
+LBZBASISTAB,Rinpersoon,Opname-uur
+LBZBASISTAB,Rinpersoon,Opnamedatum
+LINH-CLIËNTEN,Rinpersoon,Begin geldigheid GBA-record
+LINH-CLIËNTEN,Rinpersoon,Eind geldigheid GBA-record
+LMRBASIS2011,Rinpersoon,ontslaguur
+LMRBASIS2011,Rinpersoon,Opnamedatum
+LMRBASIS2011,Rinpersoon,geboortemaand
+LMRBASIS2011,Rinpersoon,Ontslagdatum patiënt uit ziekenhuis
+LMRBASIS2011,Rinpersoon,geboortejaar
+LMRBASIS2011,Rinpersoon,CBK begin geldigheid
+LMRBASIS2011,Rinpersoon,opname-uur
+LMR_BASIS,Rinpersoon,CBK begin geldigheid
+LMR_BASIS,Rinpersoon,ontslaguur
+LMR_BASIS,Rinpersoon,geboortejaar
+LMR_BASIS,Rinpersoon,Opnamedatum
+LMR_BASIS,Rinpersoon,opname-uur
+LMR_BASIS,Rinpersoon,Ontslagdatum patiënt uit ziekenhuis
+LMR_BASIS,Rinpersoon,geboortemaand
+LMR_GBA_UNICITEIT,Rinpersoon,Eind geldigheid
+LMR_GBA_UNICITEIT,Rinpersoon,Begingeldigheid
+LMo,Rinpersoon,Tijdstip: Startdatum vragenlijst
+LMo,Rinpersoon,Tijdstip: Aanstellingsjaar huidige (belangrijkste) functie
+LMo,Rinpersoon,Tijdstip: Startjaar behaalde opleiding
+MICANWPERSOONBUS,Rinpersoon,Begindatum ANW-uitkering
+MICANWPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+MICANWPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+MICAOTOTPERSOONBUS,Rinpersoon,Begindatum WGA-uitkering
+MICAOTOTPERSOONBUS,Rinpersoon,Begindatum WAJONG-uitkering
+MICAOTOTPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+MICAOTOTPERSOONBUS,Rinpersoon,Begindatum WAO-uitkering
+MICAOTOTPERSOONBUS,Rinpersoon,Begindatum WAZ-uitkering
+MICAOTOTPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+MICAOTOTPERSOONBUS,Rinpersoon,Begindatum IVA-uitkering
+MICAOWPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+MICAOWPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+MICAOWPERSOONBUS,Rinpersoon,Begindatum AOW-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum BIJSTANDBBZ-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum IOAZ-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum BIJSTANDADRESLOOS-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum BIJSTAND-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum BIJSTANDELDERSVERZ-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum IOAW-uitkering
+MICBIJSTANDPERSOONBUS,Rinpersoon,Begindatum WWIK-uitkering
+MICWWPERSOONBUS,Rinpersoon,Begindatum WW-uitkering
+MICWWPERSOONBUS,Rinpersoon,Einddatum van de periode waarin de waarden van de variabelen geldig zijn
+MICWWPERSOONBUS,Rinpersoon,Begindatum van de periode waarin de waarden van de variabelen geldig zijn
+MIGMOTIEFBUS,Rinpersoon,Datum vertrek uit Nederland
+MIGMOTIEFBUS,Rinpersoon,Datum vestiging in Nederland
+MLKLASSEBUS,Rinpersoon,De begindatum waarop de minimumloonklasseindicatie van toepassing is.
+MLKLASSEBUS,Rinpersoon,De einddatum waarop de minimumloonklasseindicatie van toepassing is.
+MSZDGADDONGENEESMVEKTTAB,Rinpersoon,De datum waarop een geneesmiddel verstrekt is.
+MSZGELEVERDZORGPROFIELTAB,Rinpersoon,Datum waarop de Zorgactiviteit wordt uitgevoerd.
+MSZOVERIGEZORGPRODUCTENTAB,Rinpersoon,Datum van de verrichting
+MSZPRESTATIESVEKTTAB,Rinpersoon,Einddatum van zorgprestatie.
+MSZPRESTATIESVEKTTAB,Rinpersoon,Datum waarop het zorgtraject eindigt.
+MSZPRESTATIESVEKTTAB,Rinpersoon,Begindatum van zorgprestatie.
+MSZPRESTATIESVEKTTAB,Rinpersoon,Beginjaar zorgprestatie.
+MSZPRESTATIESVEKTTAB,Rinpersoon,Datum waarop het zorgtraject begint.
+MSZSUBTRAJECTENTAB,Rinpersoon,Begindatum van DBC
+MSZSUBTRAJECTENTAB,Rinpersoon,Einddatum van DBC
+MSZZORGACTIVITEITENVEKTTAB,Rinpersoon,Beginjaar zorgprestatie.
+MSZZORGACTIVITEITENVEKTTAB,Rinpersoon,De datum waarop een zorgactiviteit is uitgevoerd.
+NCOACHTERGRONDSTABIEL,Rinpersoon,Geboortedatum
+NEA,Rinpersoon,Zelfgerapporteerde geboortejaar
+NEA2013,Rinpersoon,Zelfgerapporteerde geboortejaar
+NGEMSTPLBUS,Rinpersoon,Aanvangsdatum gemeente standplaats
+NGEMSTPLBUS,Rinpersoon,Einddatum gemeente standplaats
+NIETGBANATIONALITEITBUS,Rinpersoon,Datum aanvang nationaliteit niet-GBA persoon
+NIETGBANATIONALITEITBUS,Rinpersoon,Datum beëindiging nationaliteit niet-GBA persoon
+NIETGBAPERSOONTAB,Rinpersoon,Geboortemaand niet-GBA persoon
+NIETGBAPERSOONTAB,Rinpersoon,Geboortejaar niet-GBA persoon
+NIETGBAPERSOONTAB,Rinpersoon,Geboortedag niet-GBA persoon
+NIETGBAVERBLIJFBUS,Rinpersoon,Beeïndigingsdatum niet-GBA persoon
+NIETGBAVERBLIJFBUS,Rinpersoon,Aanvangsdatum niet-GBA persoon
+NNDTAB,Rinpersoon,Ongevalstijdstip
+NNDTAB,Rinpersoon,Datum van het ongeval
+NZREPISODETAB,Rinpersoon,Datum van het laatste deelcontact binnen de ziekte-episode
+NZREPISODETAB,Rinpersoon,Datum van het eerste deelcontact binnen de ziekte-episode
+NZREPISODETAB,Rinpersoon,Datum van de laatste prescriptie binnen de ziekte-episode
+NZREPISODETAB,Rinpersoon,Einddatum van de ziekte-episode
+NZREPISODETAB,Rinpersoon,Startdatum van de ziekte-episode
+NZREPISODETAB,Rinpersoon,Datum van de eerste prescriptie binnen de ziekte-episode
+NZRVERRICHTINGTAB,Rinpersoon,Datum van het contact
+ONDERWIJSINSCHRTAB,Rinpersoon,Datum waarop de leerling/student is uitgeschreven
+ONDERWIJSINSCHRTAB,Rinpersoon,Datum waarop de leerling/student is ingeschreven
+OORLVERZETPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+OORLVERZETPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+OPLARCHIEFINT,Rinpersoon,Maand registratie gegevens
+OPLARCHIEFINT,Rinpersoon,Maand aanvang opleiding
+OPLARCHIEFINT,Rinpersoon,Schooljaar waarin leerling is ingestroomd in cohort
+OPLARCHIEFINT,Rinpersoon,Dag beëindiging opleiding
+OPLARCHIEFINT,Rinpersoon,Dag aanvang opleiding
+OPLARCHIEFINT,Rinpersoon,Registratiejaar
+OPLARCHIEFINT,Rinpersoon,Jaar beëindiging opleiding
+OPLARCHIEFINT,Rinpersoon,Maand beëindiging opleiding
+OVARBEIDBUS,Rinpersoon,Einddatum situatie
+OVARBEIDBUS,Rinpersoon,Aanvangsdatum van inkomsten uit overige arbeid
+OVARBEIDBUS,Rinpersoon,Begindatum situatie
+OVARBEIDMNDBEDRAGBUS,Rinpersoon,Einddatum situatie
+OVARBEIDMNDBEDRAGBUS,Rinpersoon,Begindatum situatie
+OVIN,Rinpersoon,dag van de uitruk
+OVIN,Rinpersoon,Aankomstminuut beroepsmatige verplaatsing
+OVIN,Rinpersoon,Alternate key. Week waarop de opgave van toepassing is.
+OVIN,Rinpersoon,Ritaankomstminuut
+OVIN,Rinpersoon,Vertrekminuut verplaatsing
+OVIN,Rinpersoon,Vertrekminuut beroepsmatige verplaatsing
+OVIN,Rinpersoon,Ritvertrekuur
+OVIN,Rinpersoon,Rapportagemaand
+OVIN,Rinpersoon,Alternate key. Jaar waarop de opgave van toepassing is.
+OVIN,Rinpersoon,Activiteitsduur (in minuten)
+OVIN,Rinpersoon,Aankomstminuut verplaatsing
+OVIN,Rinpersoon,Aankomstuur beroepsmatige verplaatsing
+OVIN,Rinpersoon,Bouwjaar van de woning
+OVIN,Rinpersoon,Aankomstuur verplaatsing
+OVIN,Rinpersoon,Ritvertrekminuut
+OVIN,Rinpersoon,Vertrekuur verplaatsing
+OVIN,Rinpersoon,Vertrekuur beroepsmatige verplaatsing
+OVIN,Rinpersoon,Ritaankomstuur
+OVIN2012,Rinpersoon,Alternate key. Jaar waarop de opgave van toepassing is.
+OVIN2012,Rinpersoon,Alternate key. Week waarop de opgave van toepassing is.
+OVIN2012,Rinpersoon,Bouwjaar van de woning
+OVIN2012,Rinpersoon,Ritvertrekuur
+OVIN2012,Rinpersoon,Aankomstuur verplaatsing
+OVIN2012,Rinpersoon,Rapportagemaand
+OVIN2012,Rinpersoon,Aankomstuur beroepsmatige verplaatsing
+OVIN2012,Rinpersoon,Ritaankomstminuut
+OVIN2012,Rinpersoon,Vertrekminuut verplaatsing
+OVIN2012,Rinpersoon,Vertrekuur beroepsmatige verplaatsing
+OVIN2012,Rinpersoon,Activiteitsduur (in minuten)
+OVIN2012,Rinpersoon,Ritvertrekminuut
+OVIN2012,Rinpersoon,Ritaankomstuur
+OVIN2012,Rinpersoon,dag van de uitruk
+OVIN2012,Rinpersoon,Vertrekminuut beroepsmatige verplaatsing
+OVIN2012,Rinpersoon,Aankomstminuut beroepsmatige verplaatsing
+OVIN2012,Rinpersoon,Vertrekuur verplaatsing
+OVIN2012,Rinpersoon,Aankomstminuut verplaatsing
+OVIN2013,Rinpersoon,Ritaankomstminuut
+OVIN2013,Rinpersoon,Alternate key. Week waarop de opgave van toepassing is.
+OVIN2013,Rinpersoon,Aankomstminuut verplaatsing
+OVIN2013,Rinpersoon,Vertrekminuut verplaatsing
+OVIN2013,Rinpersoon,Alternate key. Jaar waarop de opgave van toepassing is.
+OVIN2013,Rinpersoon,Ritaankomstuur
+OVIN2013,Rinpersoon,Vertrekuur beroepsmatige verplaatsing
+OVIN2013,Rinpersoon,Activiteitsduur (in minuten)
+OVIN2013,Rinpersoon,Vertrekminuut beroepsmatige verplaatsing
+OVIN2013,Rinpersoon,Aankomstminuut beroepsmatige verplaatsing
+OVIN2013,Rinpersoon,Ritvertrekuur
+OVIN2013,Rinpersoon,Aankomstuur verplaatsing
+OVIN2013,Rinpersoon,Bouwjaar van de woning
+OVIN2013,Rinpersoon,Rapportagemaand
+OVIN2013,Rinpersoon,Aankomstuur beroepsmatige verplaatsing
+OVIN2013,Rinpersoon,dag van de uitruk
+OVIN2013,Rinpersoon,Ritvertrekminuut
+OVIN2013,Rinpersoon,Vertrekuur verplaatsing
+OVUITKMNDBEDRAGBUS,Rinpersoon,Einde overige uitkering
+OVUITKMNDBEDRAGBUS,Rinpersoon,Aanvang overige uitkering
+OVUITKPERSOONBUS,Rinpersoon,Begindatum Wachtgeld
+OVUITKPERSOONBUS,Rinpersoon,Begindatum Ziektewet-uitkering
+OVUITKPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+OVUITKPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+OVUITKPERSOONBUS,Rinpersoon,Begindatum andere overige uitkering
+PARTNERBUS,Rinpersoon,Datum aanvang van samenwonen
+PARTNERBUS,Rinpersoon,Datum einde van samenwonen
+PENSIOENAANSPRAAKJJJJANA,Rinpersoon,Geboortejaar
+PENSIOENAANSPRAAKJJJJANA,Rinpersoon,Peildatum waarop de de pensioenaanspraken gelden
+PENSIOENAANSPRAAKOPJJJJANA,Rinpersoon,Peildatum waarop de de pensioenaanspraken gelden
+PENSIOENAANSPRAAKOPJJJJANA,Rinpersoon,Geboortejaar
+PENSNABESTPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+PENSNABESTPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+PENSOVMNDBEDRAGBUS,Rinpersoon,Aanvang overige pensioen uitkering
+PENSOVMNDBEDRAGBUS,Rinpersoon,Einde overige pensioen uitkering
+PENSOVPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+PENSOVPERSOONBUS,Rinpersoon,"Begindatum Overige pensioen, lijfrente enz."
+PENSOVPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+PENSOVPERSOONBUS,Rinpersoon,Begindatum Oorlogs- en verzetpensioen
+PENSOVPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+PENSOVPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+PENSPIJLER2PERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+PENSPIJLER2PERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+PENSPIJLER3PERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+PENSPIJLER3PERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+PGBAWBZTAB,Rinpersoon,Einddatum toegekend PGB JJJJMMDD
+PGBAWBZTAB,Rinpersoon,Begindatum toegekend PGB JJJJMMDD
+PGBWLZWMOJWTAB,Rinpersoon,Einddatum van de declaratie JJJJMMDD
+PGBWLZWMOJWTAB,Rinpersoon,Begindatum van de declaratie JJJJMMDD
+PGBWLZWMOJWTAB,Rinpersoon,Einddatum van het persoonsgebonden budget JJJJMMDD
+PGBWLZWMOJWTAB,Rinpersoon,Begindatum van het persoonsgebonden budget JJJJMMDD
+PIVAADRESOBJECTBUS,Rinpersoon,Datum aanvang adresbewoning persoon
+PIVAADRESOBJECTBUS,Rinpersoon,Datum beeïndiging adresbewoning persoon
+PIVABURGERLIJKESTAATBUS,Rinpersoon,Datum waarop een burgerlijke staat van de persoon is ingegaan.
+PIVABURGERLIJKESTAATBUS,Rinpersoon,Datum waarop een burgerlijke staat van de persoon is beëindigd.
+PIVAMIGRATIEBUS,Rinpersoon,Datum waarop migratieperiode is begonnen.
+PIVAMIGRATIEBUS,Rinpersoon,Datum waarop migratieperiode is beëindigd.
+PIVANATIONALITEITBUS,Rinpersoon,Datum aanvang nationaliteitencombinatie persoon JJJJMMDD
+PIVANATIONALITEITBUS,Rinpersoon,Datum beëindiging nationaliteitencombinatie persoon JJJJMMDD
+PIVAOVERLIJDENTAB,Rinpersoon,Datum van overlijden
+PIVAPERSOONTAB,Rinpersoon,Geboortedag van de moeder
+PIVAPERSOONTAB,Rinpersoon,Geboortejaar van de vader
+PIVAPERSOONTAB,Rinpersoon,Geboortedag
+PIVAPERSOONTAB,Rinpersoon,Geboortejaar van de moeder
+PIVAPERSOONTAB,Rinpersoon,Geboortedag van de vader
+PIVAPERSOONTAB,Rinpersoon,Geboortejaar
+POLISBUS,Rinpersoon,Datum aanvang inkomstenopgave
+POLISBUS,Rinpersoon,Datum einde inkomstenopgave
+POLISBUS,Rinpersoon,Originele datum aanvang inkomstenverhouding zoals opgegeven in de loonaangifte
+POLISBUS,Rinpersoon,Datum aanvang inkomstenverhouding of aanvang verslagperiode
+POLISBUS,Rinpersoon,De einddatum van de inkomstenverhouding
+POLISHOOFDBAANBUS,Rinpersoon,AANVANGHBAAN
+POLISHOOFDBAANBUS,Rinpersoon,EINDEHBAAN
+PWETSRGPERSOONBUS,Rinpersoon,Einde geldigheid
+PWETSRGPERSOONBUS,Rinpersoon,Begin geldigheid
+PWETSRGVOORZIENINGTAB,Rinpersoon,Einddatum voorziening
+PWETSRGVOORZIENINGTAB,Rinpersoon,Begindatum voorziening
+PWETSRGVOORZIENINGTAB,Rinpersoon,Begindatum voorziening origineel
+PWETSRGVOORZIENINGTAB,Rinpersoon,Einddatum voorziening origineel
+RDWNPACTTAB,Rinpersoon,Datum eerste toelating voertuig
+RESTUITKPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+RESTUITKPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+RP2POLISBUS,Rinpersoon,De einddatum van de inkomstenverhouding
+RP2POLISBUS,Rinpersoon,Datum aanvang geldigheid koppelrecord
+RP2POLISBUS,Rinpersoon,Datum aanvang inkomstenverhouding
+RP2POLISBUS,Rinpersoon,Datum aanvang inkomstenopgave
+RP2POLISBUS,Rinpersoon,Geboortemaand
+RP2POLISBUS,Rinpersoon,Datum einde geldigheid koppelrecord
+RP2POLISBUS,Rinpersoon,Geboortejaar
+RP2POLISBUS,Rinpersoon,Datum einde inkomensverhouding
+RP2POLISBUS,Rinpersoon,Datum aanvang inkomensopgave
+SDI,Rinpersoon,Veldwerkperiode
+SDI,Rinpersoon,Tijdstip: Startdatum vragenlijst
+SECMBEURSMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMBEURSMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMBIJSTMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMBIJSTMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMBUS,Rinpersoon,Einddatum situatie
+SECMBUS,Rinpersoon,Begindatum situatie
+SECMDTFBUS,Rinpersoon,Begindatum deeltijdfactor
+SECMDTFBUS,Rinpersoon,Einddatum deeltijdfactor
+SECMECZLFHBUS,Rinpersoon,Begindatum mate van economische zelfstandigheid
+SECMECZLFHBUS,Rinpersoon,Einddatum mate van economische zelfstandigheid
+SECMOVACTMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMOVACTMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMPENSIOENMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMPENSIOENMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMPOSWRKBUS,Rinpersoon,Einddatum positie in de voornaamste werkkring
+SECMPOSWRKBUS,Rinpersoon,Begindatum positie in de voornaamste werkkring
+SECMSBIBUS,Rinpersoon,Begindatum economische activiteit
+SECMSBIBUS,Rinpersoon,Einddatum economische activiteit
+SECMSOCVOORZOVMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMSOCVOORZOVMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMWERKLMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMWERKLMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMWERKNDGAMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMWERKNDGAMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMZIEKTEAOMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMZIEKTEAOMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SECMZLFMNDBEDRAGBUS,Rinpersoon,BEGINDATUM MAANDBEDRAG
+SECMZLFMNDBEDRAGBUS,Rinpersoon,EINDDATUM MAANDBEDRAG
+SES_OUTPUT_DSC,Rinpersoon,Langlopende schulden
+SES_OUTPUT_DSC,Rinpersoon,"Beginbalans belastingen, premies."
+SIRAGPERSOONBUS,Rinpersoon,Einde geldigheid
+SIRAGPERSOONBUS,Rinpersoon,Begin geldigheid
+SIRWWPERSOONBUS,Rinpersoon,Einde geldigheid
+SIRWWPERSOONBUS,Rinpersoon,Begin geldigheid
+SPOLISBUS,Rinpersoon,Datum aanvang inkomstenverhouding of aanvang verslagperiode
+SPOLISBUS,Rinpersoon,Datum aanvang inkomstenopgave
+SPOLISBUS,Rinpersoon,Datum einde inkomstenopgave
+SPOLISBUS,Rinpersoon,De einddatum van de inkomstenverhouding of einde verslagperiode
+SPOLISBUS,Rinpersoon,Originele datum aanvang inkomstenverhouding zoals opgegeven in de loonaangifte
+SPOLISCNBUS,Rinpersoon,Datum einde baan
+SPOLISCNBUS,Rinpersoon,Datum begin baan
+SPOLISHOOFDBAANBUS,Rinpersoon,SAANVANGHBAAN
+SPOLISHOOFDBAANBUS,Rinpersoon,SEINDEHBAAN
+SRGPERSONENTAB,Rinpersoon,Begindatum van het re-integratietraject
+SRGPERSONENTAB,Rinpersoon,Einddatum van het re-integratietraject
+SRGPERSOONBUS,Rinpersoon,Eind geldigheid
+SRGPERSOONBUS,Rinpersoon,Begin geldigheid
+SRGPERSOONPWETBUS,Rinpersoon,Eind geldigheid
+SRGPERSOONPWETBUS,Rinpersoon,Begin geldigheid
+SRGREINTEGRATIEPOSITIEBUS,Rinpersoon,Einddatum re-integratiepositie
+SRGREINTEGRATIEPOSITIEBUS,Rinpersoon,Begindatum re-integratiepositie
+SRGREINTEGRATIEPOSITIEBUS,Rinpersoon,Begin geldigheid
+SRGREINTEGRATIEPOSITIEBUS,Rinpersoon,Eind geldigheid
+SRGVOORZIENINGPWETTAB,Rinpersoon,Begindatum re-integratievoorziening
+SRGVOORZIENINGPWETTAB,Rinpersoon,Einddatum re-integratievoorziening
+SRGVOORZIENINGTAB,Rinpersoon,Begindatum re-integratievoorziening
+SRGVOORZIENINGTAB,Rinpersoon,Einddatum re-integratievoorziening
+STANDGEDETINEERDENTAB,Rinpersoon,Datum begin detentieperiode
+STANDGEDETINEERDENTAB,Rinpersoon,Datum inschrijving inrichting
+STUDERENDENBUS,Rinpersoon,BEGINOPLEIDING
+STUDERENDENBUS,Rinpersoon,EINDOPLEIDING
+STUDIEBEURSMNDBEDRAGBUS,Rinpersoon,Begindatum situatie
+STUDIEBEURSMNDBEDRAGBUS,Rinpersoon,Einddatum situatie
+SUWVONTSLAGVERGUNTAB,Rinpersoon,Maand aanvang baan
+SUWVONTSLAGVERGUNTAB,Rinpersoon,Verschil in maanden tussen afgifte ontslagvergunning en einde baan
+SUWVONTSLAGVERGUNTAB,Rinpersoon,De datum waarop de baan werd beëindigd
+SUWVONTSLAGVERGUNTAB,Rinpersoon,Kwaliteitsaanduiding van geselecteerde baan
+SUWVONTSLAGVERGUNTAB,Rinpersoon,Jaar aanvang baan
+SUWVONTSLAGVERGUNTAB,Rinpersoon,Datum waarop de ontslagvergunning is afgegeven
+SVO,Rinpersoon,Enquetedatum
+SVO,Rinpersoon,Sinds welke datum in huidige baan
+SVO,Rinpersoon,De volgende vragen gaan over de baan waar je gemiddeld het meeste uren werkt. Sinds welk jaar werk je bij je huidige werkgever?
+SVO,Rinpersoon,"En sinds welke maand? Als je de maand niet precies weet, geef dan aan wanneer het ongeveer was."
+SVO,Rinpersoon,Ben je van plan om op een later tijdstip (nog) een opleiding te gaan volgen?
+SVO,Rinpersoon,Begindatum bij nieuwe werkkring
+SVO,Rinpersoon,geboortejaar
+UITKBUITLANDBUS,Rinpersoon,Einddatum situatie
+UITKBUITLANDBUS,Rinpersoon,Begindatum situatie
+UITKBUITLANDBUS,Rinpersoon,Begindatum uitkering buitenland
+UITKBUITLANDMNDBEDRAGBUS,Rinpersoon,Begindatum situatie
+UITKBUITLANDMNDBEDRAGBUS,Rinpersoon,Einddatum situatie
+UWVONTAANVTAB,Rinpersoon,Jaar aanvang baan volgens UWV waarvoor ontslag werd aangevraagd via het UWV.
+UWVONTAANVTAB,Rinpersoon,Maand aanvang baan volgens UWV waarvoor ontslag werd aangevraagd via het UWV.
+UWVONTAANVTAB,Rinpersoon,Jaar einde baan volgens UWV waarvoor ontslag werd aangevraagd via het UWV.
+UWVONTAANVTAB,Rinpersoon,Maand einde baan volgens UWV waarvoor ontslag werd aangevraagd via het UWV.
+UWVONTSLAGTAB,Rinpersoon,Datum einde baan
+UWVONTSLAGVERGUNTAB,Rinpersoon,Het aanvangsjaar van de baan waarvoor een ontslagvergunning werd aangevraagd volgens de gegevens van de ontslagvergunning
+UWVONTSLAGVERGUNTAB,Rinpersoon,Kwaliteitsaanduiding van geselecteerde baan
+UWVONTSLAGVERGUNTAB,Rinpersoon,Verschil in maanden tussen afgifte ontslagvergunning en einde baan
+UWVONTSLAGVERGUNTAB,Rinpersoon,Datum waarop de ontslagvergunning is afgegeven
+UWVONTSLAGVERGUNTAB,Rinpersoon,De aanvangsmaand van de baan waarvoor een ontslagvergunning werd aangevraagd volgens de gegevens van de ontslagvergunning
+UWVONTSLAGVERGUNTAB,Rinpersoon,De datum waarop de baan werd beëindigd
+VKDTAB,Rinpersoon,Ongevalstijdstip
+VKDTAB,Rinpersoon,Datum van het dodelijke verkeersongeval
+VRLGBAADRESBUITENLANDBUS,Rinpersoon,Beëindigingsdatum buitenlands adres persoon JJJJMMDD
+VRLGBAADRESBUITENLANDBUS,Rinpersoon,Aanvangsdatum buitenlands adres persoon JJJJMMDD
+VRLGBAADRESOBJECTBUS,Rinpersoon,Datum beeïndiging adresbewoning persoon
+VRLGBAADRESOBJECTBUS,Rinpersoon,Datum aanvang adresbewoning persoon
+VRLGBABURGERLIJKESTAATBUS,Rinpersoon,Geboortejaar partner
+VRLGBABURGERLIJKESTAATBUS,Rinpersoon,Geboortedag partner
+VRLGBABURGERLIJKESTAATBUS,Rinpersoon,Datum waarop een burgerlijke staat van de persoon is ingegaan.
+VRLGBABURGERLIJKESTAATBUS,Rinpersoon,Datum waarop een burgerlijke staat van de persoon is beëindigd.
+VRLGBABURGERLIJKESTAATBUS,Rinpersoon,Geboortemaand partner
+VRLGBAHUISHOUDENSBUS,Rinpersoon,Geboortejaar jongste thuiswonend kind in het huishouden.
+VRLGBAHUISHOUDENSBUS,Rinpersoon,Aanvangsdatum van het huishouden.
+VRLGBAHUISHOUDENSBUS,Rinpersoon,Beëindigingsdatum van het huishouden.
+VRLGBAHUISHOUDENSBUS,Rinpersoon,Geboortejaar oudste thuiswonend kind in het huishouden.
+VRLGBAMIGRATIEBUS,Rinpersoon,Datum waarop migratieperiode is beëindigd.
+VRLGBAMIGRATIEBUS,Rinpersoon,Datum waarop migratieperiode is begonnen.
+VRLGBANATIONALITEITBUS,Rinpersoon,Datum beëindiging nationaliteitencombinatie persoon JJJJMMDD
+VRLGBANATIONALITEITBUS,Rinpersoon,Datum aanvang nationaliteitencombinatie persoon JJJJMMDD
+VRLGBAOVERLIJDENTAB,Rinpersoon,Datum van overlijden
+VRLGBAPERSOONTAB,Rinpersoon,Geboortedag van de vader
+VRLGBAPERSOONTAB,Rinpersoon,Geboortedag
+VRLGBAPERSOONTAB,Rinpersoon,Geboortedag van de moeder
+VRLGBAPERSOONTAB,Rinpersoon,Geboortejaar van de moeder
+VRLGBAPERSOONTAB,Rinpersoon,Geboortejaar van de vader
+VRLGBAPERSOONTAB,Rinpersoon,Geboortejaar
+VRLMIGMOTBUS,Rinpersoon,Datum vertrek uit Nederland
+VRLMIGMOTBUS,Rinpersoon,Datum vestiging in Nederland
+WERKONDERZOEK,Rinpersoon,Originele datum aanvang inkomstenverhouding zoals opgegeven in de loonaangifte
+WERKONDERZOEK,Rinpersoon,Tijdstip: Startdatum vragenlijst
+WERKONDERZOEK,Rinpersoon,In welk jaar bent u begonnen met uw stage? / Sinds welk jaar werkt u voor uw huidige werkgever?
+WERKONDERZOEK,Rinpersoon,Datum aanvang inkomstenverhouding of aanvang verslagperiode
+WERKONDERZOEK,Rinpersoon,Sinds welk jaar werkt u in uw huidige functie?
+WGPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+WGPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
+WLZZINTAB,Rinpersoon,"De einddatum van declaratie van Wlz-zorg in natura, JJJJMMDD"
+WLZZINTAB,Rinpersoon,"De begindatum van de declaratie van Wlz-zorg in natura, JJJJMMDD"
+WMOBUS,Rinpersoon,Begindatum maatwerkvoorziening
+WMOBUS,Rinpersoon,Einddatum Wmo maatwerkvoorziening
+WMOBUS,Rinpersoon,Begindatum van de geldigheid van het record over het Wmo maatwerkvoorziening
+WMOBUS,Rinpersoon,Einddatum van de geldigheid van het record over het Wmo maatwerkvoorziening
+WMOTAB,Rinpersoon,Einddatum Wmo maatwerkarrangement
+WMOTAB,Rinpersoon,Begindatum maatwerkarrangement
+WNE2019-I,Rinpersoon,Uizettperiode van de vragenlijst
+WNE2019-I,Rinpersoon,Sinds wanneer werkt u in de sector Zorg en Welzijn?
+WNE2019-I,Rinpersoon,Tijdstip: Startdatum vragenlijst
+WNE2019-I,Rinpersoon,Sinds wanneer bent u werkzaam bij uw huidige werkgever
+WNE2021-11,Rinpersoon,Sinds wanneer bent u werkzaam bij uw huidige werkgever
+WNE2021-11,Rinpersoon,Sinds wanneer werkt u in de sector Zorg en Welzijn?
+WNE2022-II,Rinpersoon,Sinds wanneer werkt u in de sector Zorg en Welzijn?
+WNE2022-II,Rinpersoon,Sinds wanneer bent u werkzaam bij uw huidige werkgever
+WNE2023-II,Rinpersoon,Sinds wanneer werkt u in de sector Zorg en Welzijn?
+WNE2023-II,Rinpersoon,Sinds wanneer bent u werkzaam bij uw huidige werkgever
+WNE2024-II,Rinpersoon,Sinds wanneer bent u werkzaam bij uw huidige werkgever
+WNE2024-II,Rinpersoon,Sinds wanneer werkt u in de sector Zorg en Welzijn?
+WOONBASEKENMERKENHUISHOUDENS,Rinpersoon,Aanvangsdatum van het huishouden geldig aan het einde van het jaar.
+WOONBASEKENMERKENHUISHOUDENS,Rinpersoon,Aanvangsdatum van het huishouden geldig aan het begin van het jaar
+WOONBASEKENMERKENPERSONEN,Rinpersoon,Geboortejaar geldig aan het einde van het jaar
+WOONBASEKENMERKENPERSONEN,Rinpersoon,Geboortejaar geldig aan het begin van het jaar
+WOONBASEKENMERKENPERSONEN,Rinpersoon,Datum aanvang adresbewoning persoon geldig aan het begin van het jaar
+WOONBASEKENMERKENPERSONEN,Rinpersoon,Datum aanvang adresbewoning persoon geldig aan het einde van het jaar
+WOONBASEPOPULATIEHUISHOUDENS,Rinpersoon,Aanvangsdatum van het huishouden geldig aan het begin van het jaar
+WOONBASEPOPULATIEHUISHOUDENS,Rinpersoon,Aanvangsdatum van het huishouden geldig aan het einde van het jaar.
+WOONBASEPOPULATIEPERSONEN,Rinpersoon,Aanvangsdatum van het huishouden geldig aan het einde van het jaar.
+WOONBASEPOPULATIEPERSONEN,Rinpersoon,Geboortejaar geldig aan het begin van het jaar
+WOONBASEPOPULATIEPERSONEN,Rinpersoon,Geboortejaar geldig aan het einde van het jaar
+WOONBASEPOPULATIEPERSONEN,Rinpersoon,Aanvangsdatum van het huishouden geldig aan het begin van het jaar
+WOONBASESLEUTEL,Rinpersoon,Aanvangsdatum van het huishouden.
+WOONBASESLEUTEL,Rinpersoon,Ingangsdatum geldigheid record
+WOONBASESLEUTEL,Rinpersoon,Eindedatum geldigheid record
+WSNPTAB,Rinpersoon,Jaar beëindiging Wsnp
+WSNPTAB,Rinpersoon,Jaar uitspraak Wsnp
+WSNPTAB,Rinpersoon,Dag uitspraak Wsnp
+WSNPTAB,Rinpersoon,Maand beëindiging Wsnp
+WSNPTAB,Rinpersoon,Dag beëindiging Wsnp
+WSNPTAB,Rinpersoon,Maand uitspraak Wsnp
+WSNPpersBUS,Rinpersoon,Datum beëindiging Wsnp
+WSNPpersBUS,Rinpersoon,Datum toelating Wsnp
+WUSUITKERING1ATAB,Rinpersoon,Datum eerste werkloosheidsdag of herleefd recht
+WUSUITKERING1ATAB,Rinpersoon,Vermoedelijke einddatum uitkering
+WUSUITKERING1ATAB,Rinpersoon,De datum waarop de uitkeringsverhouding tussen de uitkerende instantie en de uitkeringsgerechtigde formeel is aangevangen.
+WUSUITKERING1ATAB,Rinpersoon,De datum van de laatste dag van de periode die is uitgekeerd.
+WUSUITKERING1ATAB,Rinpersoon,De datum waarop de uitkeringsverhouding tussen de uitkerende instantie en de uitkeringsgerechtigde daadwerkelijk is beëindigd.
+WWMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot welke de waarden van de variabelen geldig zijn.
+WWMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarden van de variabelen geldig zijn.
+WWPERSOONBUS,Rinpersoon,Begindatum overige werkloosheidsuitkering
+WWPERSOONBUS,Rinpersoon,Datum tot welke de waarden van de variabelen geldig zijn
+WWPERSOONBUS,Rinpersoon,Datum vanaf welke de waarden van de variabelen geldig zijn
+WWPERSOONBUS,Rinpersoon,Begindatum WW-uitkering
+WWPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) vanaf welke de waarden van de variabelen geldig zijn.
+WWPERSOONMNDBEDRAGBUS,Rinpersoon,Datum (JJJJMMDD) tot welke de waarden van de variabelen geldig zijn.
+ZEA,Rinpersoon,Sinds welk jaar bent u werkzaam als zelfstandige?
+ZEA,Rinpersoon,Sinds welk jaar bestaat uw huidige bedrijf of onderneming?
+ZEA,Rinpersoon,Tijdstip: Startdatum vragenlijst
+ZELFSTANDIGENMNDBEDRAGBUS,Rinpersoon,Aanvangdatum zelfstandige
+ZELFSTANDIGENMNDBEDRAGBUS,Rinpersoon,Begindatum situatie
+ZELFSTANDIGENMNDBEDRAGBUS,Rinpersoon,Einddatum situatie
+ZORGMVTAB,Rinpersoon,Einddatum van de opname
+ZORGMVTAB,Rinpersoon,Begindatum van de opname
+ZORGZVTAB,Rinpersoon,Datum eind zorg zonder verblijf
+ZORGZVTAB,Rinpersoon,Eerste dag van zorgafname
+ZVWELVTAB,Rinpersoon,De einddatum van de (al dan niet geaggregeerde) declaratie(s) in het Zvw- eerstelijnsverblijf
+ZVWELVTAB,Rinpersoon,De begindatum van de (al dan niet geaggregeerde) declaratie(s) in het Zvw-eerstelijnsverblijf
+ZVWWVPTAB,Rinpersoon,"De einddatum van de declaratie(s) in de Zvw-Wijkverpleging, JJJJMMDD"
+ZVWWVPTAB,Rinpersoon,"De begindatum van de declaratie(s) in de Zvw-Wijkverpleging, JJJJMMDD"
+ZVWZZGTAB,Rinpersoon,"De einddatum van de (al dan niet geaggregeerde) declaratie(s) in de Zvw-Zorg voor zintuiglijk gehandicapten, JJJJMMDD"
+ZVWZZGTAB,Rinpersoon,"De begindatum van de (al dan niet geaggregeerde) declaratie(s) in de Zvw-Zorg voor zintuiglijk gehandicapten, JJJJMMDD"
+ZWPERSOONMNDBEDRAGBUS,Rinpersoon,Einde geldigheidsperiode attributen
+ZWPERSOONMNDBEDRAGBUS,Rinpersoon,Aanvang geldigheidsperiode attributen
