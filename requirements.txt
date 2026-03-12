@@ -1,5 +1,0 @@
-duckdb
-polars
-numpy
-jupyter
-pyarrow

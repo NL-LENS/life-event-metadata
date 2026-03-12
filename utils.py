@@ -14,11 +14,11 @@ ROOT = Path(
 )
 
 
-def wide_print(df, tbl_rows=None):
+def wide_print(df, n_rows=None):
     """Print a Polars DataFrame with full column content."""
     cfg = {"fmt_str_lengths": 1000, "tbl_width_chars": 1000}
-    if tbl_rows is not None:
-        cfg["tbl_rows"] = tbl_rows
+    if  n_rows is not None:
+        cfg["tbl_rows"] = n_rows
     with pl.Config(**cfg):
         print(df)
 

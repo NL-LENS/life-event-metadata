@@ -32,7 +32,7 @@ SELECT DISTINCT ?altTitle ?var1Label ?tijdstipVarLabel WHERE {
 ORDER BY ?altTitle
 ```
 
-The output of the query is in `Data-designs-with-events_preflabel.csv`
+The output of the query is in `data/designs-with-events_preflabel.csv`
 
 
 
