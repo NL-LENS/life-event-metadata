@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = ["utils"]
+
+[project]
+name = "teamnl-events-dataset"
+version = "0.1.0"
+description = "Exploring event-like variables in CBS microdata via the ODISSEI Knowledge Graph"
+requires-python = ">=3.12"
+dependencies = [
+    "duckdb",
+    "polars",
+    "numpy",
+    "jupyter",
+    "pyarrow",
+    "sparqlwrapper",
+]
