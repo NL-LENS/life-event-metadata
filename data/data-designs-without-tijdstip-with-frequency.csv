@@ -1,0 +1,155 @@
+altTitle,datasetTitle,frequency
+ANWJAARBEDRAGTAB,Jaarbedragen van personen met een Algemene Nabestaandenwet (ANW)-uitkering,Jaar
+AOTOTJAARBEDRAGTAB,Jaarbedragen van personen met een arbeidsongeschiktheids (AO)-uitkering,Jaar
+AOTOTMNDBEDRAGBUS,Maandbedragen van personen met een arbeidsongeschiktheids (AO)-uitkering,Jaar
+AOTOTPERSOONMNDBEDRAGBUS,Maandbedragen van personen met een arbeidsongeschiktheidsuitkering,Jaar
+AOWATAB,Kenmerken van AOW-aanspraken,Jaar
+AOWJAARBEDRAGTAB,Jaarbedragen van personen met een Algemene Ouderdomswet (AOW)-uitkering,Jaar
+AOWPERSOONMNDBEDRAGBUS,Maandbedragen personen met een AOW-uitkering,Jaar
+BAANPRSJAARBEDRAGTAB,Jaarlijkse loonbedragen van werknemers,Jaar
+BAANPRSMNDBEDRAGBUS,Maandelijkse loonbedragen van werknemers,Jaar
+BAANSOMMENTAB,Kwantitatieve jaargegevens van banen van werknemers,Jaar
+BELEVINGEN,"Opvattingen van de Nederlandse bevolking van 18 jaar en ouder over het doen van betaald werk, doorwerken tot de pensioengerechtigde leeftijd, pensioenopbouw en jongere en oudere werknemers.",Jaar
+BELONINGVANARTSEN,Beloning van in zorg werkzame artsen,Jaar
+BIJSTANDJAARBEDRAGTAB,Jaarbedragen van personen met een bijstandsuitkering,Jaar
+BIJSTANDMNDBEDRAGBUS,Maandbedragen van personen met een bijstandsuitkering,Jaar
+BIJSTANDPERSOONJAARBEDRAGTAB,Jaarbedragen personen met een bijstandsuitkering,Jaar
+BIJSTANDPERSOONMNDBEDRAGBUS,Maandbedragen personen met een bijstandsuitkering,Jaar
+DEELTIJDFACTORBAANBUS,Deeltijdfactoren van alle banen van werknemers in Nederland,Jaar
+DEMENTIEPOPULATIEVEKTISTAB,Vektis dementiepopulatie,Jaar
+DOOTAB,Doodsoorzaken van personen die bij overlijden inwoners waren van Nederland.,Jaar
+EBBLFSTAB,Personen in de Enquête Beroepsbevolking met werk gerelateerde Eurostat gegevens.,Jaar
+EWLBUS,Enquête Werkgelegenheid en Lonen (EWL),Jaar
+EWPUBLBUS,Enquête Werkgelegenheid en Lonen (EWL-publicatiebestand),Jaar
+EXTRAKENMERKENPERSONENAANDACHTSGROEPENMIGRATIE,Woonbase Extra Kenmerken Personen Aandachtsgroepen Migratie,Jaar
+GBAKINDERENVANDETWEEDEGENERATIE,"Personen met een Nederlandse achtergrond, inclusief kinderen van tweede generatie ouders met een migratieachtergrond, 1 januari",Jaar
+GBALEVENDGEBORENENMASSATAB,Persoonsidentificatoren van in de Gemeentelijke Basisadministratie Persoonsgegevens (GBA) ingeschreven levendgeboren personen,Jaar
+GBASTERFTENMASSATAB,Persoonsidentificatoren van in de Gemeentelijke Basisadministratie Persoonsgegevens (GBA) ingeschreven overleden personen,Jaar
+GEDETINEERDENTAB,Strafrechtelijk gedetineerden met hun zwaarste misdrijf,Jaar
+GEMWIJKSTPLTAB,"Gemeente, wijk en woon-werk afstand van de standplaats van banen in december",Jaar
+GRBSTAB,Personen die gesubsidieerde rechtsbijstand kregen,Jaar
+GWBSTPLTAB,"Gemeente, wijk, buurt en woon-werk afstand van de standplaats van banen in december",Jaar
+HJLKTAB,Personen die contact hebben gehad met Het Juridisch Loket,Jaar
+HKSTAB,Delictkenmerken van personen tegen wie een proces-verbaal van misdrijf is opgemaakt,Jaar
+HUISARTSDECLTAB,Patientgebonden huisartsdeclaraties,Jaar
+INPBEIDTAB,Bedrijven van ondernemers (revisie 2017),Jaar
+JZPLUSTAB,Jongeren in JeugdzorgPlus,Jaar
+LBZDIAGNOSENTAB,Diagnosen behorend bij ziekenhuisopnamen Landelijke Basisregistratie Ziekenhuiszorg,Jaar
+LINH-CLIËNTEN,Personen ingeschreven in een LINH-huisartsenpraktijk,Jaar
+LINH-EPISODE,Diagnoses van zorgepisodes bij de huisarts,Jaar
+LINH-VERRICHTINGEN,Aantal en soort huisartscontacten van personen ingeschreven in een LINH-praktijk,Jaar
+MEDICIJNDATUM,Verstrekkingen van geneesmiddelen op 4 posities ATC-code aan personen met datum verstrekking,Jaar
+MEDICIJNTAB,Verstrekkingen van geneesmiddelen op 4 posities ATC-code aan personen,Jaar
+MLKLASSEBUS,Minimumloonklasse van banen van werknemers,Jaar
+NEA,Nationale Enquête Arbeidsomstandigheden 2012,Jaar
+NEA2013,Nationale Enquête Arbeidsomstandigheden 2013,Jaar
+NEA2014,Nationale Enquête Arbeidsomstandigheden 2014,Jaar
+NEA2014,Nationale Enquête Arbeidsomstandigheden 2014 (INACTIEF),Jaar
+NEA2014-2020,Nationale Enquête Arbeidsomstandigheden,Jaar
+NEA2014-2021,Nationale Enquête Arbeidsomstandigheden,Jaar
+NEA2014-2022,Nationale Enquête Arbeidsomstandigheden,Jaar
+NEA2015,Nationale Enquête Arbeidsomstandigheden 2015 (INACTIEF),Jaar
+NEA2015,Nationale Enquête Arbeidsomstandigheden 2015,Jaar
+NEA2016,Nationale Enquête Arbeidsomstandigheden 2016,Jaar
+NEA2017,Nationale Enquête Arbeidsomstandigheden 2017,Jaar
+NLSTAB,Nagelaten vermogen van overledenen,Jaar
+NZRCLIENTTAB,Cliënten van huisartspraktijken deelnemend aan Nivel Zorgregistraties Eerste Lijn,Jaar
+ONDERWIJSPERSONEELTAB,Baandelen van personeel in het onderwijs,Jaar
+OVUITKJAARBEDRAGTAB,Jaarbedragen van personen met een overige uitkering,Jaar
+PENSOVJAARBEDRAGTAB,Jaarbedragen van personen met een pensioenuitkering anders dan AOW of ANW,Jaar
+PERSOONINKBEIDTAB,Bedrijven van ondernemers,Jaar
+PERSOONINKTAB,Inkomen van personen,Jaar
+POLISLONGBAANTAB,Koppeltabel longitudinale banen van werknemers op basis van de Polisadministratie.,Jaar
+PROVJZTAB,Gebruik provinciale jeugdzorg naar vormen van jeugdzorg,Jaar
+PS_ZORGPRAKTIJKENREVISIE,"Productiestatistiek Zorgpraktijken, revisie 2015",Jaar
+PS_ZORGPRAKTIJKENREVISIE,Productiestatistiek Zorgpraktijken,Jaar
+SCHTAB,"Schenkingen waarvoor aangifte schenkbelasting gedaan is, met een unieke relatie tussen de schenker en ontvanger van de schenking",Jaar
+SDI,"Sociaal Domein Index: Gegevens over personen rond participatie en zelfredzaamheid, en zorg en jeugd.",Jaar
+SHNTAB,Delictinformatie van clienten van Slachtofferhulp Nederland,Jaar
+SIRAGPERSOONBUS,Kenmerken van trajectperiodes van personen met één of meer (gelijktijdig lopende) re-integratietrajecten die worden verzorgd door het Uitvoeringsinstituut Werknemersverzekeringen,Jaar
+SIRWWPERSOONBUS,Kenmerken van trajectperiodes van personen met re-integratietrajecten in het kader van de Werkloosheidswet,Jaar
+SLOTAB,Geregistreerde slachtoffers van een misdrijf,Jaar
+SPOLISLONGBAANTAB,Koppeltabel longitudinale banen van werknemers op basis van de Polisadministratie,Jaar
+STUDIEBEURSJAARBEDRAGTAB,Personen met studiefinanciering,Jaar
+UWVONTAANVTAB,Ontslagaanvragen bij het Uitvoeringsinstituut Werknemersverzekeringen (UWV),Jaar
+UWVONTSLAGTAB,Beëindigde banen via een ontslagvergunning van het UWV werkbedrijf,Jaar
+VERDTAB,Delictkenmerken van personen die door de politie zijn geregistreerd als verdachte van een misdrijf,Jaar
+VRKTAB,Verkrijgingen uit nalatenschappen van overledenen,Jaar
+WINSTENVANARTSEN,Winsten van zelfstandige artsen,Jaar
+WSNPTAB,Personen die een schuldsanering hebben via de Wet schuldsanering natuurlijke personen,Jaar
+WSNPpersBUS,Personen die ooit een schuldsanering hebben gekregen via de Wet schuldsanering natuurlijke personen,Jaar
+WWJAARBEDRAGTAB,Jaarbedragen van personen met een Werkloosheidswet (WW)-uitkering,Jaar
+WWMNDBEDRAGBUS,Maandbedragen van personen met een Werkloosheidswet (WW)-uitkering,Jaar
+WWPERSOONMNDBEDRAGBUS,Maandbedragen van personen met een werkloosheidsuitkering,Jaar
+ZEA,"Zelfstandigen Enquête Arbeid (ZEA) bevat informatie op het gebied van arbeidsomstandigheden, arbeidsinhoud, arbeidsverhoudingen en arbeidsvoorwaarden van zelfstandigen",Jaar
+ZELFSTANDIGENTAB,Personen met inkomsten uit eigen onderneming,Jaar
+ZVWZORGKOSTENTAB,Zorgkosten van Nederlandse ingezetenen met een basisverzekering,Jaar
+CITOTAB,Kenmerken van deelnemers aan de Eindtoets Basisonderwijs van Cito,Kalenderjaar
+EXTRAKENMERKENPERSONENAANDACHTSGROEPENALGEMEEN,Woonbase Extra Kenmerken Personen Aandachtsgroepen Algemeen,Kalenderjaar
+EXTRAKENMERKENPERSONENAANDACHTSGROEPENDETENTIE,Woonbase Extra Kenmerken Personen Aandachtsgroepen Detentie,Kalenderjaar
+EXTRAKENMERKENPERSONENAANDACHTSGROEPENZORG,Woonbase Extra Kenmerken Personen Aandachtsgroepen Zorg,Kalenderjaar
+EXTRAKENMERKENPERSONENAANDACHTSGROEPENWOONWAGENCENTRA,Woonbase Extra Kenmerken Personen Aandachtsgroepen Woonwagencentra,Kalenderjaar
+INPATAB,Inkomen van personen (revisie 2017),Kalenderjaar
+INPBTAB,Inkomen van personen Deel B,Kalenderjaar
+INPHHKERNTAB,Personen naar relatie tot kern huishouden(revisie 2017),Kalenderjaar
+IPOREVA,"Inkomenspanelonderzoek: inkomen- en vermogen van huishoudens en personen, revisie 2021, deel A",Kalenderjaar
+NCOACHTERGRONDVARIABEL,"Nationaal Cohortonderzoek Onderwijs met veranderlijke demografische-, regio-, inkomens- en opleidingsgegevens van de PO en VO cohorten",Kalenderjaar
+RKTKINDERENTAB,Kinderopvangtoeslag kinderen naar soort kinderopvang,Kalenderjaar
+RKTONTVANGERSTAB,Kinderopvangtoeslag en kosten per ontvanger,Kalenderjaar
+ZVWZZGTAB,Personen met gebruik van Zvw-Zorg voor zintuiglijk gehandicapten,Kalenderjaar
+ARBBUITLANDMNDBEDRAGBUS,Maandbedragen inkomsten arbeid buitenland van personen,Maand
+GEMEENTESTPLTAB,Gemeente Standplaats van de banen in december,Maand
+GEMSTPLBUS,"Baan van een werknemer (definitief, december, Polisadministratie)",Maand
+OVARBEIDMNDBEDRAGBUS,Maandbedragen inkomsten uit overige arbeid van personen,Maand
+SECMBEURSMNDBEDRAGBUS,Personen met studiebeurs in de verslagmaand,Maand
+SECMBIJSTMNDBEDRAGBUS,Personen met bijstand in de verslagmaand,Maand
+SECMBUS,Personen sociaaleconomische categorie,Maand
+SECMDTFBUS,Personen deeltijdfactor sociaaleconomische categorie,Maand
+SECMECZLFHBUS,Economische zelfstandigheid van personen,Maand
+SECMOVACTMNDBEDRAGBUS,Personen met inkomen uit overige arbeid in de verslagmaand,Maand
+SECMPENSIOENMNDBEDRAGBUS,Personen met pensioen in de verslagmaand,Maand
+SECMPOSWRKBUS,Positie in de voornaamste werkkring van personen met inkomen uit arbeid in een bepaalde maand,Maand
+SECMSBIBUS,Economische activiteit van het bedrijf van de voornaamste werkkring waarin werkzame personen in een bepaalde maand werkzaam zijn,Maand
+SECMSOCVOORZOVMNDBEDRAGBUS,Personen met een uitkering uit overige sociale voorzieningen in de verslagmaand,Maand
+SECMWERKLMNDBEDRAGBUS,Personen met een werkloosheidsuitkering in de verslagmaand,Maand
+SECMWERKNDGAMNDBEDRAGBUS,Personen met loon in de verslagmaand,Maand
+SECMZIEKTEAOMNDBEDRAGBUS,Personen met een uitkering bij ziekte of arbeidsongeschiktheid in de verslagmaand,Maand
+SECMZLFMNDBEDRAGBUS,Personen met winst in de verslagmaand,Maand
+SRGLOONKOSTINSTROOMTAB,Personen met gestarte loonkostensubsidies,Maand
+SRGLOONKOSTUITSTROOMTAB,Personen met een beeindigde loonkostensubsidie,Maand
+SRGTRAJINSTROOMTAB,Personen met een gestart re-integratietraject,Maand
+SRGTRAJUITSTROOMTAB,Personen met een beëindigd re-integratietraject,Maand
+UITKBUITLANDMNDBEDRAGBUS,Maandbedragen inkomsten uit een uitkering uit het buitenland van personen,Maand
+UWVCOACHTAB,Personen die coachingsgesprekken met het Uitvoeringsinstituut Werknemersverzekeringen hebben gehad,Maand
+UWVRICOACHTAB,Personen die re-integratiecoachgesprekken met het Uitvoeringsinstituut Werknemersverzekeringen hebben gehad,Maand
+UWVTRAAGGTAB,Personen met één of meer re-integratietrajecten die worden verzorgd door het Uitvoeringsinstituut Werknemersverzekeringen,Maand
+VERWIJZINGTAB,Personen die door het Uitvoeringsinstituut Werknemersverzekeringen naar een vacature zijn verwezen,Maand
+AOTOTPERSOONBUS,Kenmerken van uitkeringsperiodes van personen met één of meer (gelijktijdig lopende) arbeidsongeschiktheidsuitkeringen,Niet eenduidig
+FAILONTTAB,Werknemers ontslagen door faillissement,Niet eenduidig
+GGDCOVID19BM,COVID-19 besmettingsmeldingen uit HPZone Lite van de gemeentelijke gezondheidsdiensten,Niet eenduidig
+HDIPLOMAREGTAB,Hoogst behaalde diploma op basis van onderwijsregistraties,Niet eenduidig
+HSNRPKINDEREN,Historische Steekproef Nederland: kinderen en familierelaties,Niet eenduidig
+KINDOUDERTAB,In de Gemeentelijke Basisadministratie Persoonsgegevens (GBA) ingeschreven personen en hun juridische ouders,Niet eenduidig
+NIETGBAVERBLIJFBUS,Periode en verblijfslocatie van personen die niet zijn ingeschreven in de Gemeentelijke Basisadministratie Persoonsgegevens,Niet eenduidig
+OPLARCHIEFINT,"Opleidingsarchief, bevat informatie vanuit verschillende bronnen over door personen gevolgde opleidingen",Niet eenduidig
+PWETSRGPERSOONBUS,Personen met re-integratie- of participatievoorzieningen,Niet eenduidig
+SRGPERSOONPWETBUS,Periodes met kenmerken van re-integratievoorzieningen van personen op grond van de Participatiewet,Niet eenduidig
+UNIEKJJ-JJ,GBA uniciteit per jaar,Niet eenduidig
+VRLGBAGEBOORTEGEMEENTETAB,"Geboortegemeente van alle in de Gemeentelijke Basis Administratie (GBA) ingeschreven personen, niet gecoördineerd",Niet eenduidig
+VTVPERSOONTAB,Volgtijdelijk vergelijkbare Persoon_id's van personen,Niet eenduidig
+BURENNETWERKTAB,Burennetwerk,Stand
+CIMS,COVID-19 vaccinatiegegevens uit het COVID-vaccinatie Informatie- en Monitoringssysteem,Stand
+COLLEGANETWERKTAB,Colleganetwerk,Stand
+FAMILIENETWERKTAB,Familienetwerk,Stand
+GBASTANDBEVOLKINGTAB,Gemeenteinschrijving en 4-cijferige postcode van de wettelijk vastgestelde bevolking op 1 januari van het jaar,Stand
+HOOGSTEOPLTAB,Hoogst behaald en hoogst gevolgd opleidingsniveau en opleidingsrichting van de bevolking in Nederland,Stand
+HUISGENOTENNETWERKTAB,Huisgenotennetwerk,Stand
+IWOTAB,Intergenerationele gewichten voor hoogst behaalde opleidingsniveau van kind in combinatie met die van de ouders,Stand
+KLASGENOTENNETWERKTAB,Klasgenotennetwerk,Stand
+PIVASTANDBEVOLKINGTAB,Gemeenteinschrijving van de vastgestelde bevolking van Caribisch Nederland op 1 januari van het jaar,Stand
+PIVASTANDHUISHOUDENSTAB,Huishoudenskenmerken van ingezetenen van Caribisch Nederland,Stand
+RAVTAB,Personen in Nederland met gegevens over hun arbeidsverleden in de afgelopen 4 jaar.,Stand
+STANDGEDETINEERDENTAB,Strafrechtelijk gedetineerden op 30 september met hun zwaarste misdrijf,Stand
+UWVTRAAGGTABULT,Personen met een re-integratietraject dat wordt verzorgd door het Uitvoeringsinstituut Werknemersverzekeringen,Stand
+UWVTRAPERSAGGTAB,"Personen met een re-integratietraject dat wordt verzorgd door het Uitvoeringsinstituut Werknemersverzekeringen, niet gecoördineerd",Stand
+WANBZVWTAB,"Personen met een betalingsachterstand zorgpremie, voorheen wanbetalers",Stand
