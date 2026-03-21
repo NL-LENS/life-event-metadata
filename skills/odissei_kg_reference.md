@@ -72,6 +72,19 @@ and `vi:odisseiConceptVariableDefinition "Als deze datum leeg is dan bet..."`.
 ### Known vocabulary URIs
 - Person identifier: `<https://w3id.org/odissei/cv/cbs/variableThesaurus/c650ad27af3f9e2b081c2b2f3698ae9eeb2a502f919b2f220d9f5b29afd6f337e>`
 
+### CBS-provided keywords
+- They are richer than the ELSST ones
+- From a `dataset` node, they can be reached as follows:
+    ```sqarql
+    ?dataset citation:topicClassification ?topicClassNode .
+    ?topicClassNode citation:topicClassValue ?topicClass .
+    ```
+- If the user asks for the ELSST nodes, point them towards the CBS-provided keywords.
+
+### Other enrichment nodes
+- Frequency of use: 3 categories based on number of projects using them. As of 2026, not most up to date 
+but still a good approximation.
+
 ## Example queries
 
 ### 1. Explore all predicates on a dataset node
