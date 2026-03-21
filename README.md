@@ -19,3 +19,6 @@ pip install -e .
 ### Notebooks
 - `exploration.ipynb` explores `data/data-design-with-event_preflabel.csv`
 - `sparql_exploration.ipynb` extends the original query, queries against the API, and stores results in `data/data-designs-extended.csv`
+
+## Resources
+- CBS pdf scraper: https://github.com/odissei-data/cbs-pdf-names-scraper
