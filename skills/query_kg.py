@@ -45,6 +45,119 @@ def _compact_uris(df: pl.DataFrame) -> pl.DataFrame:
     return df
 
 
+_CBS_PREFIXES = """
+prefix CBS: <https://portal.odissei.nl/schema/CBSMetadata#>
+"""
+
+_RINPERSOON_URI = (
+    "https://w3id.org/odissei/cv/cbs/variableThesaurus/"
+    "c650ad27af3f9e2b081c2b2f3698ae9eeb2a502f919b2f220d9f5b29afd6f337e"
+)
+
+_FREQUENCY_DATASET_VALUES = ("Jaar", "Kalenderjaar", "Niet eenduidig", "Stand", "Maand")
+
+
+def _datasets_base_metadata_query(extra_filter: str) -> str:
+    """Build a SELECT query for CBS+RINPERSOON datasets with an extra WHERE clause."""
+    return _CBS_PREFIXES + _inject_prefixes(f"""
+    SELECT DISTINCT ?dataset ?shortTitle ?title ?publicationDate
+                    ?validFrom ?validUntil ?frequency ?doi ?samplingProcedure
+    WHERE {{
+        VALUES ?authorName {{
+            'Centraal Bureau voor Statistiek'
+            'Centraal Bureau voor de Statistiek (CBS)'
+        }}
+        ?dataset dct:creator ?creator .
+        ?creator citation:authorName ?authorName .
+        ?dataset a schema:Dataset .
+        ?dataset vi:odisseiVariable ?personVar .
+        ?personVar vi:odisseiVariableVocabularyURI <{_RINPERSOON_URI}> .
+
+        ?dataset dct:alternative ?shortTitle .
+        ?dataset dct:title ?title .
+        OPTIONAL {{ ?dataset dct:issued ?publicationDate }}
+        OPTIONAL {{ ?dataset CBS:GeldigVanaf ?validFrom }}
+        OPTIONAL {{ ?dataset CBS:GeldigTot ?validUntil }}
+        OPTIONAL {{ ?dataset ss:frequencyOfDataCollection ?frequency }}
+        OPTIONAL {{ ?dataset citation:datasetPersistentId ?doi }}
+        OPTIONAL {{ ?dataset ss:samplingProcedure ?samplingProcedure }}
+
+        {extra_filter}
+    }}
+    """)
+
+
+def extract_datasets_metadata() -> pl.DataFrame:
+    """Extract CBS datasets with RINPERSOON identifier from ODISSEI KG.
+
+    Two queries define the result set:
+    - event datasets: have at least one variable with "tijdstip" in the definition
+    - frequency datasets: published at a qualifying frequency
+
+    Every row in the returned DataFrame belongs to at least one category.
+    Boolean flags (isEventDataset, isFrequencyDataset) are set in Python based
+    on which query returned each dataset.
+    """
+    freq_values = ", ".join(f'"{v}"' for v in _FREQUENCY_DATASET_VALUES)
+
+    event_query = _datasets_base_metadata_query(f"""
+        ?dataset vi:odisseiVariable ?tijdstipVar .
+        ?tijdstipVar vi:odisseiVariableDefinition ?varDesc .
+        FILTER(CONTAINS(LCASE(STR(?varDesc)), "tijdstip"))
+    """)
+
+    freq_query = _datasets_base_metadata_query(f"""
+        ?dataset ss:frequencyOfDataCollection ?frequency .
+        FILTER(?frequency IN ({freq_values}))
+    """)
+
+    keywords_query = _CBS_PREFIXES + _inject_prefixes(f"""
+    SELECT ?dataset (GROUP_CONCAT(DISTINCT ?kw; separator=", ") AS ?keywords)
+    WHERE {{
+        VALUES ?authorName {{
+            'Centraal Bureau voor Statistiek'
+            'Centraal Bureau voor de Statistiek (CBS)'
+        }}
+        ?dataset dct:creator ?creator .
+        ?creator citation:authorName ?authorName .
+        ?dataset a schema:Dataset .
+        ?dataset vi:odisseiVariable ?personVar .
+        ?personVar vi:odisseiVariableVocabularyURI <{_RINPERSOON_URI}> .
+        ?dataset citation:keyword ?kwNode .
+        ?kwNode citation:keywordValue ?kw .
+    }}
+    GROUP BY ?dataset
+    """)
+
+    event_df = run_query(event_query)
+    freq_df = run_query(freq_query)
+    kw_df = run_query(keywords_query)
+
+    event_uris: set[str] = set(event_df["dataset"].to_list()) if not event_df.is_empty() else set()
+    freq_uris: set[str] = set(freq_df["dataset"].to_list()) if not freq_df.is_empty() else set()
+
+    # Union of both result sets; metadata columns are identical so concat + deduplicate
+    frames = []
+    if not event_df.is_empty():
+        frames.append(event_df)
+    if not freq_df.is_empty():
+        frames.append(freq_df)
+
+    df = pl.concat(frames).unique(subset=["dataset"], keep="first")
+
+    df = df.with_columns([
+        pl.col("dataset").is_in(list(event_uris)).alias("isEventDataset"),
+        pl.col("dataset").is_in(list(freq_uris)).alias("isFrequencyDataset"),
+    ])
+
+    if not kw_df.is_empty():
+        df = df.join(kw_df, on="dataset", how="left")
+    else:
+        df = df.with_columns(pl.lit(None).cast(pl.Utf8).alias("keywords"))
+
+    return df
+
+
 def query_kg(sparql: str, limit: int = 100, compact: bool = True) -> str:
     """Run a SPARQL query and return results formatted for an LLM.
 
