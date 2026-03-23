@@ -102,8 +102,12 @@ def extract_datasets_metadata() -> pl.DataFrame:
 
     event_query = _datasets_base_metadata_query(f"""
         ?dataset vi:odisseiVariable ?tijdstipVar .
-        ?tijdstipVar vi:odisseiVariableDefinition ?varDesc .
-        FILTER(CONTAINS(LCASE(STR(?varDesc)), "tijdstip"))
+        {{ ?tijdstipVar vi:odisseiVariableName ?_val }}
+        UNION
+        {{ ?tijdstipVar vi:odisseiVariableLabel ?_val }}
+        UNION
+        {{ ?tijdstipVar vi:odisseiVariableDefinition ?_val }}
+        FILTER(CONTAINS(LCASE(STR(?_val)), "tijdstip"))
     """)
 
     freq_query = _datasets_base_metadata_query(f"""
@@ -155,6 +159,53 @@ def extract_datasets_metadata() -> pl.DataFrame:
     else:
         df = df.with_columns(pl.lit(None).cast(pl.Utf8).alias("keywords"))
 
+    return df
+
+
+def extract_variables_metadata(dataset_uris: list[str], chunk_size: int = 50) -> pl.DataFrame:
+    """Extract variable metadata for the given dataset URIs from the ODISSEI KG.
+
+    Queries are chunked to avoid oversized SPARQL requests.
+    Returns a DataFrame with one row per variable, including is_tijdstip flag.
+    """
+    chunks = [
+        dataset_uris[i : i + chunk_size]
+        for i in range(0, len(dataset_uris), chunk_size)
+    ]
+
+    frames: list[pl.DataFrame] = []
+    for chunk in chunks:
+        values = " ".join(f"<{uri}>" for uri in chunk)
+        query = _inject_prefixes(f"""
+        SELECT ?dataset ?var ?name ?label ?description ?dataType ?definition ?validFrom
+        WHERE {{
+            VALUES ?dataset {{ {values} }}
+            ?dataset vi:odisseiVariable ?var .
+            ?var vi:odisseiVariableName ?name .
+            OPTIONAL {{ ?var vi:odisseiVariableLabel ?label }}
+            OPTIONAL {{ ?var vi:odisseiVariableDefinition ?description }}
+            OPTIONAL {{ ?var vi:odisseiVariableDataType ?dataType }}
+            OPTIONAL {{ ?var vi:odisseiConceptVariableDefinition ?definition }}
+            OPTIONAL {{ ?var vi:odisseiConceptVariableValidFrom ?validFrom }}
+        }}
+        """)
+        chunk_df = run_query(query)
+        if not chunk_df.is_empty():
+            frames.append(chunk_df)
+
+    if not frames:
+        return pl.DataFrame()
+
+    df = pl.concat(frames)
+
+    # is_tijdstip: any text column contains "tijdstip" (case-insensitive)
+    text_cols = ["name", "label", "description", "definition"]
+    tijdstip_expr = pl.lit(False)
+    for col in text_cols:
+        tijdstip_expr = tijdstip_expr | (
+            pl.col(col).str.to_lowercase().str.contains("tijdstip").fill_null(False)
+        )
+    df = df.with_columns(tijdstip_expr.alias("is_tijdstip"))
     return df
 
 

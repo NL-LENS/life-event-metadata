@@ -13,9 +13,9 @@ sys.path.insert(0, str(ROOT / "skills"))
 
 import duckdb
 import polars as pl
-from query_kg import extract_datasets_metadata  # noqa: E402
+from query_kg import extract_datasets_metadata, extract_variables_metadata  # noqa: E402
 
-DB_PATH = Path(__file__).parent / "data" / "teamnl_events.duckdb"
+DB_PATH = Path(__file__).parent / "data" / "event_datasets.duckdb"
 
 
 def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
@@ -41,17 +41,17 @@ def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
     # Deduplicate on dataset_id (keep first occurrence)
     df = df.unique(subset=["dataset_id"], keep="first")
 
-    con.execute("DROP TABLE IF EXISTS datasets")
+    con.execute("DROP TABLE IF EXISTS kg_datasets")
     con.register("_datasets_staging", df.to_arrow())
     con.execute("""
-        CREATE TABLE datasets AS
+        CREATE TABLE kg_datasets AS
         SELECT
             dataset_id,
             title,
             alt_title,
-            publication_date,
-            valid_from,
-            valid_until,
+            TRY_CAST(publication_date AS DATE) AS publication_date,
+            TRY_CAST(valid_from AS DATE) AS valid_from,
+            TRY_CAST(valid_until AS DATE) AS valid_until,
             frequency,
             doi,
             keywords,
@@ -62,8 +62,48 @@ def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
     """)
     con.unregister("_datasets_staging")
 
-    count = con.execute("SELECT COUNT(*) FROM datasets").fetchone()[0]
+    count = con.execute("SELECT COUNT(*) FROM kg_datasets").fetchone()[0]
     print(f"  Wrote {count} datasets to DuckDB")
+
+
+def build_variables_table(con: duckdb.DuckDBPyConnection) -> None:
+    dataset_uris = [r[0] for r in con.execute("SELECT dataset_id FROM kg_datasets").fetchall()]
+    print(f"Querying variables for {len(dataset_uris)} datasets …")
+
+    df = extract_variables_metadata(dataset_uris)
+    print(f"  Retrieved {len(df)} rows")
+
+    df = df.rename({
+        "var": "variable_id",
+        "dataset": "dataset_id",
+        "name": "variable_name",
+        "label": "label",
+        "description": "description",
+        "dataType": "data_type",
+        "definition": "definition",
+        "validFrom": "valid_from",
+    })
+
+    con.execute("DROP TABLE IF EXISTS kg_variables")
+    con.register("_variables_staging", df.to_arrow())
+    con.execute("""
+        CREATE TABLE kg_variables AS
+        SELECT
+            variable_id,
+            dataset_id,
+            variable_name,
+            label,
+            description,
+            data_type,
+            definition,
+            TRY_CAST(valid_from AS DATE) AS valid_from,
+            is_tijdstip
+        FROM _variables_staging
+    """)
+    con.unregister("_variables_staging")
+
+    count = con.execute("SELECT COUNT(*) FROM kg_variables").fetchone()[0]
+    print(f"  Wrote {count} variables to DuckDB")
 
 
 def main() -> None:
@@ -71,6 +111,7 @@ def main() -> None:
     con = duckdb.connect(str(DB_PATH))
     try:
         build_datasets_table(con)
+        build_variables_table(con)
     finally:
         con.close()
     print(f"\nDatabase written to {DB_PATH}")
