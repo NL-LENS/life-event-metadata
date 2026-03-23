@@ -17,4 +17,5 @@ dependencies = [
     "jupyter",
     "pyarrow",
     "sparqlwrapper",
+    "pytest"
 ]
