@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 py-modules = ["utils"]
 
 [project]
-name = "teamnl-events-dataset"
+name = "odissei-life-events-dataset"
 version = "0.1.0"
 description = "Exploring event-like variables in CBS microdata via the ODISSEI Knowledge Graph"
 requires-python = ">=3.12"
