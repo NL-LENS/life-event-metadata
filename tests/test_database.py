@@ -106,7 +106,7 @@ class TestVariablesTable:
             "variable_id",
             "dataset_id",
             "variable_name",
-            "label",
+            "label_",
             "description",
             "data_type",
             "definition",
