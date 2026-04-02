@@ -9,7 +9,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 authors = [
-    { name = "Flavio Hafner", email = "f.hafner@esciencecenter.nl" }
+    { name = "Flavio Hafner", email = "f.hafner@esciencecenter.nl" },
+    { name = "Malte Luken", email = "m.luken@esciencecenter.nl" },
+    { name = "Angelica Maineri", email = "angelica@odissei-data.nl"},
+    { name = "Qixiang Fang", email = "q.fang@uu.nl"},
 ]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
