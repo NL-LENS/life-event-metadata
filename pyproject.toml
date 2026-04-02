@@ -1,4 +1,4 @@
-# see documentation, e.g.
+#  see documentation, e.g.
 # - https://packaging.python.org/en/latest/specifications/declaring-project-metadata/#declaring-project-metadata
 # - https://setuptools.pypa.io/en/latest/userguide/pyproject_config.html
 # - https://www.python.org/dev/peps/pep-0621/
@@ -9,7 +9,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 authors = [
-    { name = "Flavio Hafner", email = "hafner.flavio@gmail.com" }
+    { name = "Flavio Hafner", email = "f.hafner@esciencecenter.nl" }
 ]
 classifiers = [
     "Development Status :: 2 - Pre-Alpha",
@@ -29,7 +29,8 @@ dependencies = [
     "jupyter",
     "pyarrow",
     "sparqlwrapper",
-    "pytest"
+    "pytest",
+    "tqdm",
 ]
 description = "Harvest Odissei Knowledge Graph for metadata of life events in CBS registry data"
 keywords = ["cbs","metadata"]
@@ -43,9 +44,10 @@ version = "0.0.1"
 dev = [
     "build",  # build is not only used in publishing (below), but also in the template's test suite
     "bump-my-version",
-    "ruff",
+    "ruff>=0.15",
     "tox",
     "myst_parser",
+    "prek",
 ]
 publishing = [
     "build",
@@ -54,9 +56,9 @@ publishing = [
 ]
 
 [project.urls]
-Repository = "https://github.com/f-hafner/life_event_metadata"
-Issues = "https://github.com/f-hafner/life_event_metadata/issues"
-Changelog = "https://github.com/f-hafner/life_event_metadata/CHANGELOG.md"
+Repository = "https://github.com/odissei-data/teamnl-events-dataset/"
+Issues = "https://github.com/odissei-data/teamnl-events-dataset/issues"
+Changelog = "https://github.com/odissei-data/teamnl-events-dataset/CHANGELOG.md"
 
 
 
@@ -81,8 +83,6 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 # Enable Pyflakes `E` and `F` codes by default.
 select = ["ALL"]
 ignore = [
-    "ANN101", # Missing type annotation for `self` in method
-    "ANN102", # Missing type annotation for `cls` in classmethod
     "ANN204", # Missing return type annotation for special (dunder) method
     "FBT",    # Using boolean function arguments
     "TD",     # TODOs
@@ -94,8 +94,9 @@ ignore = [
     "D104", # Missing public package docstring
     "D105", # Missing docstring in magic method
     "D107", # Missing docstring in `__init__`
+    "COM812", # missing-trailing-comma; conflict with formatter
 ]
-pydocstyle.convention = "google"
+pydocstyle.convention = "numpy"
 
 [tool.ruff.lint.per-file-ignores]
 # Tests can ignore a few extra rules
@@ -104,6 +105,11 @@ pydocstyle.convention = "google"
     "PT011",  # Missing `match` parameter in `pytest.raises()`
     "S101",   # Use of assert is detected
 ]
+"notebooks/*ipynb" = [
+    "T201", # print found
+    "E501", # line too long
+]
+
 
 [tool.ruff.lint.isort]
 known-first-party = ["life_event_metadata"]
@@ -118,7 +124,3 @@ filename = "src/life_event_metadata/__init__.py"
 
 [[tool.bumpversion.files]]
 filename = "pyproject.toml"
-
-
-
-
