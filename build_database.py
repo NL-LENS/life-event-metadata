@@ -1,48 +1,48 @@
-"""Build the teamnl_events DuckDB database from the ODISSEI Knowledge Graph.
+"""Build the DuckDB database from the ODISSEI Knowledge Graph.
 
 Run from the repository root:
-    python build_database.py
+    python build_database.py --data-dir /path/to/data
 """
 
-import sys
+import argparse
+import logging
 from pathlib import Path
-
-ROOT = Path(__file__).parent
-sys.path.insert(0, str(ROOT))
-sys.path.insert(0, str(ROOT / "skills"))
-
 import duckdb
-import polars as pl
-from query_kg import extract_datasets_metadata, extract_variables_metadata  # noqa: E402
+from life_event_metadata.queries import extract_datasets_metadata
+from life_event_metadata.queries import extract_variables_metadata
 
-DB_PATH = Path(__file__).parent / "data" / "event_datasets.duckdb"
+logger = logging.getLogger(__name__)
+
+DB_NAME = "event_datasets.duckdb"
 
 
 def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
-    print("Querying datasets metadata from ODISSEI KG …")
-    df = extract_datasets_metadata()
-    print(f"  Retrieved {len(df)} rows")
+    """Query the knowledge graph for datasets metadata."""
+    logger.info("Querying datasets metadata from ODISSEI KG...")
+    dataset_df = extract_datasets_metadata()
+    logger.info("--Retrieved %s rows", len(dataset_df))
 
-    df = df.rename({
-        "dataset": "dataset_id",
-        "shortTitle": "alt_title",
-        "title": "title",
-        "publicationDate": "publication_date",
-        "validFrom": "valid_from",
-        "validUntil": "valid_until",
-        "frequency": "frequency",
-        "doi": "doi",
-        "samplingProcedure": "sampling_procedure",
-        "keywords": "keywords",
-        "isEventDataset": "is_event_dataset",
-        "isFrequencyDataset": "is_frequency_dataset",
-    })
+    dataset_df = dataset_df.rename(
+        {
+            "dataset": "dataset_id",
+            "shortTitle": "alt_title",
+            "title": "title",
+            "publicationDate": "publication_date",
+            "validFrom": "valid_from",
+            "validUntil": "valid_until",
+            "frequency": "frequency",
+            "samplingProcedure": "sampling_procedure",
+            "keywords": "keywords",
+            "isEventDataset": "is_event_dataset",
+            "isFrequencyDataset": "is_frequency_dataset",
+        },
+    )
 
     # Deduplicate on dataset_id (keep first occurrence)
-    df = df.unique(subset=["dataset_id"], keep="first")
+    dataset_df = dataset_df.unique(subset=["dataset_id"], keep="first")
 
     con.execute("DROP TABLE IF EXISTS kg_datasets")
-    con.register("_datasets_staging", df.to_arrow())
+    con.register("_datasets_staging", dataset_df.to_arrow())
     con.execute("""
         CREATE TABLE kg_datasets AS
         SELECT
@@ -53,7 +53,6 @@ def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
             TRY_CAST(valid_from AS DATE) AS valid_from,
             TRY_CAST(valid_until AS DATE) AS valid_until,
             frequency,
-            doi,
             keywords,
             sampling_procedure,
             is_event_dataset,
@@ -63,29 +62,35 @@ def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
     con.unregister("_datasets_staging")
 
     count = con.execute("SELECT COUNT(*) FROM kg_datasets").fetchone()[0]
-    print(f"  Wrote {count} datasets to DuckDB")
+    logger.info("--Wrote %s datasets to database", count)
 
 
 def build_variables_table(con: duckdb.DuckDBPyConnection) -> None:
+    """Build the variables table."""
     dataset_uris = [r[0] for r in con.execute("SELECT dataset_id FROM kg_datasets").fetchall()]
-    print(f"Querying variables for {len(dataset_uris)} datasets …")
+    logger.info("Querying variables for %s datasets", len(dataset_uris))
 
-    df = extract_variables_metadata(dataset_uris)
-    print(f"  Retrieved {len(df)} rows")
+    variables_df = extract_variables_metadata(dataset_uris)
+    logger.info("--Retrieved %s rows", len(variables_df))
 
-    df = df.rename({
-        "var": "variable_id",
-        "dataset": "dataset_id",
-        "name": "variable_name",
-        "label": "label_",
-        "description": "description",
-        "dataType": "data_type",
-        "definition": "definition",
-        "validFrom": "valid_from",
-    })
+    variables_df = variables_df.rename(
+        {
+            "var": "variable_id",
+            "dataset": "dataset_id",
+            "name": "variable_name",
+            "label": "label_",
+            "description": "description",
+            "dataType": "data_type",
+            "definition": "definition",
+            "validFrom": "valid_from",
+            "vocabLabel": "vocab_label",
+            "numPredicates": "num_predicates",
+            "tijdstipPredicates": "tijdstip_predicates",
+        },
+    )
 
     con.execute("DROP TABLE IF EXISTS kg_variables")
-    con.register("_variables_staging", df.to_arrow())
+    con.register("_variables_staging", variables_df.to_arrow())
     con.execute("""
         CREATE TABLE kg_variables AS
         SELECT
@@ -93,9 +98,12 @@ def build_variables_table(con: duckdb.DuckDBPyConnection) -> None:
             dataset_id,
             variable_name,
             label_,
+            vocab_label,
             description,
             data_type,
             definition,
+            num_predicates,
+            tijdstip_predicates,
             TRY_CAST(valid_from AS DATE) AS valid_from,
             is_tijdstip
         FROM _variables_staging
@@ -103,19 +111,28 @@ def build_variables_table(con: duckdb.DuckDBPyConnection) -> None:
     con.unregister("_variables_staging")
 
     count = con.execute("SELECT COUNT(*) FROM kg_variables").fetchone()[0]
-    print(f"  Wrote {count} variables to DuckDB")
+    logger.info("--Wrote %s variables to database.", count)
 
 
 def main() -> None:
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    con = duckdb.connect(str(DB_PATH))
-    try:
+    """Build the db."""
+    parser = argparse.ArgumentParser(description="Build the DuckDB database from the ODISSEI Knowledge Graph.")
+    parser.add_argument(
+        "--data-dir",
+        type=Path,
+        default="data/",
+        help="Directory where the database will be stored (default: ./data)",
+    )
+    args = parser.parse_args()
+
+    db_path = args.data_dir / DB_NAME
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    with duckdb.connect(str(db_path)) as con:
         build_datasets_table(con)
         build_variables_table(con)
-    finally:
-        con.close()
-    print(f"\nDatabase written to {DB_PATH}")
+    logger.info("Database written to %s", db_path)
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     main()
