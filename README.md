@@ -61,7 +61,6 @@ Deprecated but kept for reference:
 - `data-designs-extended.csv` is an export of a SPARQL query run in the notebook `sparql_exploration.ipynb`
 
 ### Notebooks
-- `exploration.ipynb` explores `data/data-design-with-event_preflabel.csv`
 - `sparql_exploration.ipynb` extends the original query, queries against the API, and stores results in `data/data-designs-extended.csv`
 
 ## Resources
