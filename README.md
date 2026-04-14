@@ -9,6 +9,11 @@ source .venv/bin/activate
 pip install -e .
 ```
 
+or
+```bash
+uv sync
+```
+
 ### Building the database
 
 You can create a database with main metadata around a broad set of datasets
@@ -16,6 +21,10 @@ that could be relevant. Run
 
 ```python
 python build_database.py
+```
+
+or ```bash
+uv run build_database.py
 ```
 
 #### Database content
