@@ -34,6 +34,7 @@ dependencies = [
     "sparqlwrapper",
     "pytest",
     "tqdm",
+    "matplotlib",
 ]
 description = "Harvest Odissei Knowledge Graph for metadata of life events in CBS registry data"
 keywords = ["cbs","metadata"]
@@ -111,6 +112,7 @@ pydocstyle.convention = "numpy"
 "notebooks/*ipynb" = [
     "T201", # print found
     "E501", # line too long
+    "S608", # possible SQL injection
 ]
 
 
