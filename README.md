@@ -67,9 +67,9 @@ Main data:
 - `event_datasets.duckdb`: database created by `build_database.py`
 - `Datasets 9424.csv`: Datasets in 9424 project from CBS, but still incomplete (ie, no KINDOUDERTAB)
 
-Deprecated but kept for reference:
-- `data-designs-with-event_preflabel.csv` is an export of a SPARQL query run on Triply (see [here](https://kg.odissei.nl/odissei/-/queries/Data-designs-with-events/3)) on the KG. It is intended to list all the CBS data designs in the Portal which contain RINPERSOON AND a variable which mentions "Tijdstip" in its metadata. The query found 818 RINPERSOON + Time combinations, from 258 datasets
-- `data-designs-extended.csv` is an export of a SPARQL query run in the notebook `sparql_exploration.ipynb`
+Archived but kept for reference:
+- `archive/data-designs-with-event_preflabel.csv` is an export of a SPARQL query run on Triply (see [here](https://kg.odissei.nl/odissei/-/queries/Data-designs-with-events/3)) on the KG. It is intended to list all the CBS data designs in the Portal which contain RINPERSOON AND a variable which mentions "Tijdstip" in its metadata. The query found 818 RINPERSOON + Time combinations, from 258 datasets
+- `archive/data-designs-extended.csv` is an export of a SPARQL query run in the notebook `sparql_exploration.ipynb`
 
 ### Notebooks
 - `sparql_exploration.ipynb` extends the original query, queries against the API, and stores results in `data/data-designs-extended.csv`
