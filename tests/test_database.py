@@ -40,7 +40,7 @@ class TestDatasetsTable:
             "valid_until",
             "frequency",
             "keywords",
-            "is_event_dataset",
+            "is_tijdstip_dataset",
             "is_frequency_dataset",
         }
         assert expected.issubset(cols), f"Missing columns: {expected - cols}"
@@ -58,7 +58,7 @@ class TestDatasetsTable:
         [
             (["dataset_id", "alt_title"], operator.eq),
             (["valid_from"], operator.eq),
-            (["is_event_dataset", "is_frequency_dataset"], operator.eq),
+            (["is_tijdstip_dataset", "is_frequency_dataset"], operator.eq),
         ],
         ids=[
             "dataset_and_title-not-null",
@@ -79,7 +79,7 @@ class TestDatasetsTable:
     def _make_where_null(self, columns: list) -> str:
         """Make sql-injection safe 'where x is null' string."""
         clause = ""
-        allowed_columns = ["dataset_id", "alt_title", "valid_from", "is_event_dataset", "is_frequency_dataset"]
+        allowed_columns = ["dataset_id", "alt_title", "valid_from", "is_tijdstip_dataset", "is_frequency_dataset"]
         for i, col in enumerate(columns):
             if col not in allowed_columns:
                 msg = "Invalid columns: %s", col
@@ -102,9 +102,9 @@ class TestDatasetsTable:
         )
 
     def test_every_dataset_is_in_at_least_one_category(self, con: duckdb.DuckDBPyConnection):
-        """Every dataset must be an event dataset, a frequency dataset, or both."""
+        """Every dataset must be an tijdstip dataset, a frequency dataset, or both."""
         orphans = con.execute(
-            "SELECT COUNT(*) FROM kg_datasets WHERE NOT is_event_dataset AND NOT is_frequency_dataset",
+            "SELECT COUNT(*) FROM kg_datasets WHERE NOT is_tijdstip_dataset AND NOT is_frequency_dataset",
         ).fetchone()[0]
         assert orphans == 0, f"{orphans} datasets belong to neither category"
 
@@ -161,26 +161,26 @@ class TestVariablesTable:
         ).fetchone()[0]
         assert nulls == 0
 
-    def test_event_datasets_have_tijdstip_variables(self, con: duckdb.DuckDBPyConnection):
-        """Every event dataset must have at least one tijdstip variable."""
+    def test_tijdstip_datasets_have_tijdstip_variables(self, con: duckdb.DuckDBPyConnection):
+        """Every tijdstip dataset must have at least one tijdstip variable."""
         missing = con.execute(
             "SELECT COUNT(*) FROM kg_datasets d "
-            "WHERE d.is_event_dataset "
+            "WHERE d.is_tijdstip_dataset "
             "AND NOT EXISTS ("
             "  SELECT 1 FROM kg_variables v "
             "  WHERE v.dataset_id = d.dataset_id AND v.is_tijdstip"
             ")",
         ).fetchone()[0]
-        assert missing == 0, f"{missing} event datasets have no tijdstip variables"
+        assert missing == 0, f"{missing} tijdstip datasets have no tijdstip variables"
 
-    def test_tijdstip_variables_only_in_event_datasets(self, con: duckdb.DuckDBPyConnection):
-        """Tijdstip variables should only appear in event datasets."""
+    def test_tijdstip_variables_only_in_tijdstip_datasets(self, con: duckdb.DuckDBPyConnection):
+        """Tijdstip variables should only appear in tijdstip datasets."""
         bad = con.execute(
             "SELECT COUNT(*) FROM kg_variables v "
             "JOIN kg_datasets d ON v.dataset_id = d.dataset_id "
-            "WHERE v.is_tijdstip AND NOT d.is_event_dataset",
+            "WHERE v.is_tijdstip AND NOT d.is_tijdstip_dataset",
         ).fetchone()[0]
-        assert bad == 0, f"{bad} tijdstip variables found in non-event datasets"
+        assert bad == 0, f"{bad} tijdstip variables found in non-tijdstip datasets"
 
     def test_every_dataset_has_variables(self, con: duckdb.DuckDBPyConnection):
         """Every dataset in the DB should have at least one variable."""
@@ -208,12 +208,12 @@ class TestDataVolume:
         n_expected = 1000
         assert count >= n_expected, f"Only {count} variables — expected >={n_expected}"
 
-    def test_event_dataset_count_in_range(self, con: duckdb.DuckDBPyConnection):
-        """Prior exploration found ~258 event datasets."""
-        count = con.execute("SELECT COUNT(*) FROM kg_datasets WHERE is_event_dataset").fetchone()[0]
+    def test_tijdstip_dataset_count_in_range(self, con: duckdb.DuckDBPyConnection):
+        """Prior exploration found ~258 tijdstip datasets."""
+        count = con.execute("SELECT COUNT(*) FROM kg_datasets WHERE is_tijdstip_dataset").fetchone()[0]
         n_high = 500
         n_low = 258
-        assert n_low <= count <= n_high, f"Event dataset count {count} outside expected range"
+        assert n_low <= count <= n_high, f"tijdstip dataset count {count} outside expected range"
 
     def test_tijdstip_variable_count(self, con: duckdb.DuckDBPyConnection):
         """Prior exploration found 516 tijdstip variables."""

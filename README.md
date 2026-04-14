@@ -16,7 +16,7 @@ uv sync
 
 ### Building the database
 
-You can create a database with main metadata around a broad set of datasets
+You can create a duckdb database with main metadata around a broad set of datasets
 that could be relevant. Run
 
 ```python
@@ -27,6 +27,8 @@ or ```bash
 uv run build_database.py
 ```
 
+The resulting database is stored at `./data/event_datasets.duckdb`. 
+
 #### Database content
 
 The database has two tables
@@ -34,9 +36,9 @@ The database has two tables
 - `kg_variables`: all variables of these datasets and corresponding metadata.
 
 There are two types of datasets. They all are published by CBS, have a RINPERSOON column, and are
-either an "event dataset" or a "frequency dataset"
+either an "tijdstip dataset" or a "frequency dataset"
 
-*Event datasets* are identified as datasets that have at least one time variable
+*Tijdstip datasets* are identified as datasets that have at least one time variable
 ("tijdstip" occurs in the variable label), and this variable is linked to a
 controlled vocabulary (SKOS).
 
