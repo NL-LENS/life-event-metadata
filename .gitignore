@@ -5,3 +5,6 @@
 __pycache__/
 *.duckdb
 .copier-answers.yml
+
+# Ignore DS_Store files on macOS
+.DS_Store
