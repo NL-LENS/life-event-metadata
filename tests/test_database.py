@@ -102,7 +102,7 @@ class TestDatasetsTable:
         )
 
     def test_every_dataset_is_in_at_least_one_category(self, con: duckdb.DuckDBPyConnection):
-        """Every dataset must be an tijdstip dataset, a frequency dataset, or both."""
+        """Every dataset must be a tijdstip dataset, a frequency dataset, or both."""
         orphans = con.execute(
             "SELECT COUNT(*) FROM kg_datasets WHERE NOT is_tijdstip_dataset AND NOT is_frequency_dataset",
         ).fetchone()[0]
