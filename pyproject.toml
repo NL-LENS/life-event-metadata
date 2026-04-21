@@ -35,6 +35,8 @@ dependencies = [
     "pytest",
     "tqdm",
     "matplotlib",
+    "streamlit",
+    "plotly",
 ]
 description = "Harvest Odissei Knowledge Graph for metadata of life events in CBS registry data"
 keywords = ["cbs","metadata"]
