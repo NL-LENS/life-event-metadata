@@ -44,6 +44,7 @@ def load_datasets():
         SELECT
             alt_title,
             title,
+            description,
             dataset_id,
             is_tijdstip_dataset,
             is_frequency_dataset,
@@ -439,17 +440,17 @@ def main():
                     # Dataset ID as link
                     st.markdown(f"🔗 [{row['dataset_id'][:50]}...]({row['dataset_id']})")
 
-                    # Sampling procedure in expandable section
-                    sampling = row.get("sampling_procedure")
-                    has_sampling = bool(
-                        sampling is not None and str(sampling).strip() and str(sampling).lower() != "none"
+                    # Description in expandable section
+                    description = row.get("description")
+                    has_description = bool(
+                        description is not None and str(description).strip() and str(description).lower() != "none"
                     )
 
-                    with st.expander("📊 Methodology", expanded=has_sampling):
-                        if has_sampling:
-                            st.write(sampling)
+                    with st.expander("📊 Description", expanded=has_description):
+                        if has_description:
+                            st.write(description)
                         else:
-                            st.caption("No sampling procedure info available.")
+                            st.caption("No description available.")
 
     # Render the fragment inside sidebar context - this runs independently without triggering chart refresh
     with st.sidebar:
