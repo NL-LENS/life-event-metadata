@@ -52,7 +52,8 @@ def load_datasets():
             valid_until,
             keywords,
             publication_date,
-            sampling_procedure
+            sampling_procedure,
+            frequency
         FROM kg_datasets
     """).pl()
     con.close()
@@ -69,7 +70,8 @@ def load_variables():
             variable_name,
             is_tijdstip,
             data_type,
-            description
+            description,
+            valid_from
         FROM kg_variables
     """).pl()
     con.close()
@@ -457,12 +459,11 @@ def main():
         render_dataset_explorer_fragment(timeline_df, filtered_df)
 
     # --- Main Content Tabs ---
-    tab1, tab2, tab3, tab4 = st.tabs(
+    tab1, tab2, tab3 = st.tabs(
         [
             "📈 Timeline",
             "📋 Dataset Table",
             "🔄 Comparison",
-            "🔍 Variables",
         ]
     )
 
@@ -528,6 +529,13 @@ def main():
         if len(filtered_df) == 0:
             st.warning("No datasets match the selected filters.")
         else:
+            # Dataset search filter
+            dataset_search = st.text_input(
+                "🔍 Search datasets",
+                placeholder="e.g., werkloos or GBAPERSOONTAB",
+                help="Search in both dataset code (alt_title) and title. Case-insensitive.",
+            )
+
             # Prepare display dataframe
             display_df = filtered_df.with_columns(
                 [
@@ -538,6 +546,9 @@ def main():
                     .then(pl.lit("tijdstip"))
                     .otherwise(pl.lit("frequency"))
                     .alias("type"),
+                    # Format valid_from and valid_until as date only (no time)
+                    pl.col("valid_from").dt.strftime("%Y-%m-%d").alias("valid_from"),
+                    pl.col("valid_until").dt.strftime("%Y-%m-%d").alias("valid_until"),
                 ]
             ).select(
                 [
@@ -550,11 +561,146 @@ def main():
                 ]
             )
 
-            st.dataframe(
+            # Apply search filter if search term provided
+            if dataset_search:
+                search_lower = dataset_search.lower()
+                display_df = display_df.filter(
+                    pl.col("alt_title").str.to_lowercase().str.contains(search_lower, literal=True, strict=False)
+                    | pl.col("title").str.to_lowercase().str.contains(search_lower, literal=True, strict=False)
+                )
+                st.caption(f"Showing {len(display_df)} datasets matching '{dataset_search}'")
+
+            # Display dataframe with row selection enabled
+            event = st.dataframe(
                 display_df.to_pandas(),
                 use_container_width=True,
                 hide_index=True,
+                on_select="rerun",
+                selection_mode="single-row",
             )
+
+            # Show details for selected dataset
+            selected_rows = event["selection"]["rows"]
+            if selected_rows:
+                selected_idx = selected_rows[0]
+                selected_alt_title = display_df[selected_idx, "alt_title"]
+
+                # Get full dataset details from original filtered_df
+                dataset_details = filtered_df.filter(pl.col("alt_title") == selected_alt_title)
+
+                if len(dataset_details) > 0:
+                    row = dataset_details.to_dicts()[0]
+
+                    st.divider()
+                    st.subheader(f"📋 Details: {selected_alt_title}")
+
+                    # Display key information in columns
+                    col1, col2 = st.columns(2)
+                    with col1:
+                        st.markdown("**Title:**")
+                        st.write(row["title"])
+
+                        # Build type string with frequency for frequency datasets
+                        frequency = row.get("frequency")
+                        if row["is_tijdstip_dataset"] and row["is_frequency_dataset"]:
+                            type_str = "Both Event & Frequency"
+                            if frequency:
+                                type_str += f" ({frequency})"
+                        elif row["is_tijdstip_dataset"]:
+                            type_str = "Event Dataset"
+                        else:
+                            type_str = "Frequency Dataset"
+                            if frequency:
+                                type_str += f" ({frequency})"
+
+                        st.markdown("**Type:**")
+                        st.write(type_str)
+
+                    with col2:
+                        st.markdown("**Valid From:**")
+                        st.write(row["valid_from"] or "Not specified")
+
+                        st.markdown("**Valid Until:**")
+                        st.write(row["valid_until"] or "Present")
+
+                    # Description
+                    description = row.get("description")
+                    if description:
+                        st.markdown("**Description:**")
+                        st.write(description)
+
+                    # Keywords
+                    keywords = row.get("keywords")
+                    if keywords:
+                        st.markdown("**Keywords:**")
+                        st.write(", ".join(keywords) if isinstance(keywords, list) else keywords)
+
+                    # Sampling Procedure
+                    sampling = row.get("sampling_procedure")
+                    if sampling and str(sampling).strip().lower() != "none":
+                        st.markdown("**Sampling Procedure:**")
+                        st.write(sampling)
+
+                    # Dataset link
+                    st.markdown(f"🔗 **[View in ODISSEI Portal]({row['dataset_id']})**")
+
+                    # Variables table for selected dataset
+                    st.divider()
+                    st.subheader("📊 Variables in this Dataset")
+
+                    # Get variables for this dataset
+                    dataset_id = row["dataset_id"]
+                    vars_df = variables_df.filter(pl.col("dataset_id") == dataset_id)
+
+                    if len(vars_df) == 0:
+                        st.info("No variables found for this dataset.")
+                    else:
+                        # Variable search filter
+                        var_search = st.text_input(
+                            "🔍 Search variables",
+                            placeholder="e.g., SVO or geboorte",
+                            key=f"var_search_{dataset_id}",
+                            help="Search by variable name. Case-insensitive.",
+                        )
+
+                        # Prepare variables display
+                        vars_display = vars_df.with_columns(
+                            [
+                                pl.when(pl.col("is_tijdstip"))
+                                .then(pl.lit("✅ Yes"))
+                                .otherwise(pl.lit("❌ No"))
+                                .alias("is_timestamp"),
+                                # Format valid_from as date only (no time)
+                                pl.col("valid_from").dt.strftime("%Y-%m-%d").alias("valid_from"),
+                            ]
+                        ).select(
+                            [
+                                "variable_name",
+                                "description",
+                                "data_type",
+                                "valid_from",
+                                "is_timestamp",
+                            ]
+                        )
+
+                        # Apply variable search filter if provided
+                        if var_search:
+                            search_lower = var_search.lower()
+                            vars_display = vars_display.filter(
+                                pl.col("variable_name")
+                                .str.to_lowercase()
+                                .str.contains(search_lower, literal=True, strict=False)
+                            )
+                            st.caption(f"Showing {len(vars_display)} variables matching '{var_search}'")
+
+                        vars_display = vars_display.sort("variable_name")
+
+                        st.dataframe(
+                            vars_display.to_pandas(),
+                            use_container_width=True,
+                            hide_index=True,
+                        )
+                        st.caption(f"{len(vars_df)} total variables in this dataset")
 
     # Tab 3: Comparison
     with tab3:
@@ -596,69 +742,6 @@ def main():
                     st.write(sorted(in_csv_only))
                 else:
                     st.write("None")
-
-    # Tab 4: Variables
-    with tab4:
-        st.header("Variable Explorer")
-
-        # Dataset selector
-        dataset_options = filtered_df["alt_title"].to_list()
-        if not dataset_options:
-            st.warning("No datasets match the selected filters.")
-        else:
-            selected_dataset = st.selectbox(
-                "Select a dataset",
-                options=dataset_options,
-                help="Choose a dataset to view its variables",
-            )
-
-            if selected_dataset:
-                # Get dataset_id
-                dataset_id = filtered_df.filter(pl.col("alt_title") == selected_dataset)["dataset_id"][0]
-
-                # Get variables
-                vars_df = variables_df.filter(pl.col("dataset_id") == dataset_id)
-
-                if len(vars_df) == 0:
-                    st.info("No variables found for this dataset.")
-                else:
-                    # Add type column
-                    vars_display = vars_df.with_columns(
-                        [
-                            pl.when(pl.col("is_tijdstip"))
-                            .then(pl.lit("timestamp"))
-                            .otherwise(pl.lit("other"))
-                            .alias("type"),
-                        ]
-                    ).select(
-                        [
-                            "variable_name",
-                            "type",
-                            "data_type",
-                        ]
-                    )
-
-                    st.write(f"**{len(vars_df)} variables**")
-
-                    # Show timestamp variables first
-                    timestamp_vars = vars_display.filter(pl.col("type") == "timestamp")
-                    other_vars = vars_display.filter(pl.col("type") != "timestamp")
-
-                    if len(timestamp_vars) > 0:
-                        st.subheader("⏰ Timestamp Variables")
-                        st.dataframe(
-                            timestamp_vars.to_pandas(),
-                            use_container_width=True,
-                            hide_index=True,
-                        )
-
-                    if len(other_vars) > 0:
-                        st.subheader("📋 Other Variables")
-                        st.dataframe(
-                            other_vars.to_pandas(),
-                            use_container_width=True,
-                            hide_index=True,
-                        )
 
 
 if __name__ == "__main__":
