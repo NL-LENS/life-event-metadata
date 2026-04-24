@@ -45,7 +45,7 @@ def load_datasets():
             alt_title,
             title,
             dataset_id,
-            is_event_dataset,
+            is_tijdstip_dataset,
             is_frequency_dataset,
             valid_from,
             valid_until,
@@ -115,12 +115,12 @@ def filter_datasets(df, selected_keywords, dataset_types, min_datasets):
     # Dataset type filter
     if dataset_types:
         type_conditions = []
-        if "event" in dataset_types:
-            type_conditions.append(pl.col("is_event_dataset"))
+        if "tijdstip" in dataset_types:
+            type_conditions.append(pl.col("is_tijdstip_dataset"))
         if "frequency" in dataset_types:
             type_conditions.append(pl.col("is_frequency_dataset"))
         if "both" in dataset_types:
-            type_conditions.append(pl.col("is_event_dataset") & pl.col("is_frequency_dataset"))
+            type_conditions.append(pl.col("is_tijdstip_dataset") & pl.col("is_frequency_dataset"))
         if type_conditions:
             filtered = filtered.filter(pl.any_horizontal(type_conditions))
 
@@ -159,13 +159,13 @@ def prepare_timeline_data(df, truncate_left, truncate_right):
             # Only include breaks that are before the right truncation (i.e., real breaks, not ongoing)
             pl.col("valid_until").filter(pl.col("valid_until") < pl.lit(truncate_right)).unique().alias("breaks"),
             # Keep boolean flags for summary stats (True if any row has it)
-            pl.max("is_event_dataset").alias("is_event_dataset"),
+            pl.max("is_tijdstip_dataset").alias("is_tijdstip_dataset"),
             pl.max("is_frequency_dataset").alias("is_frequency_dataset"),
             # Determine dataset type
-            pl.when(pl.max("is_event_dataset") & pl.max("is_frequency_dataset"))
+            pl.when(pl.max("is_tijdstip_dataset") & pl.max("is_frequency_dataset"))
             .then(pl.lit("both"))
-            .when(pl.max("is_event_dataset"))
-            .then(pl.lit("event"))
+            .when(pl.max("is_tijdstip_dataset"))
+            .then(pl.lit("tijdstip"))
             .otherwise(pl.lit("frequency"))
             .alias("dataset_type"),
             # Collect unique keywords from all rows
@@ -180,7 +180,7 @@ def prepare_timeline_data(df, truncate_left, truncate_right):
 def make_gantt_chart(df, show_break_markers=True):
     """Create interactive Plotly Gantt chart with break markers."""
     color_map = {
-        "event": "#2ca02c",
+        "tijdstip": "#2ca02c",
         "frequency": "#ff7f0e",
         "both": "#1f77b4",
     }
@@ -300,10 +300,10 @@ def main():
 
     dataset_types = st.sidebar.multiselect(
         "Dataset Type",
-        options=["event", "frequency", "both"],
-        default=["event", "frequency", "both"],
+        options=["tijdstip", "frequency", "both"],
+        default=["tijdstip", "frequency", "both"],
         format_func=lambda x: {
-            "event": "Event Dataset",
+            "tijdstip": "Tijdstip Dataset",
             "frequency": "Frequency Dataset",
             "both": "Both Types",
         }[x],
@@ -409,10 +409,10 @@ def main():
                     row = dataset_details.to_dicts()[0]
 
                     # Determine dataset type label
-                    if row["is_event_dataset"] and row["is_frequency_dataset"]:
+                    if row["is_tijdstip_dataset"] and row["is_frequency_dataset"]:
                         type_label = "Both"
                         type_color = "blue"
-                    elif row["is_event_dataset"]:
+                    elif row["is_tijdstip_dataset"]:
                         type_label = "Event"
                         type_color = "green"
                     else:
@@ -508,7 +508,7 @@ def main():
             # Summary statistics (using aggregated boolean columns)
             col1, col2, col3 = st.columns(3)
             with col1:
-                st.metric("Event Datasets", int(timeline_df["is_event_dataset"].sum()))
+                st.metric("Event Datasets", int(timeline_df["is_tijdstip_dataset"].sum()))
             with col2:
                 st.metric(
                     "Frequency Datasets",
@@ -517,7 +517,7 @@ def main():
             with col3:
                 st.metric(
                     "Both Types",
-                    int((timeline_df["is_event_dataset"] & timeline_df["is_frequency_dataset"]).sum()),
+                    int((timeline_df["is_tijdstip_dataset"] & timeline_df["is_frequency_dataset"]).sum()),
                 )
 
     # Tab 2: Dataset Table
@@ -531,10 +531,10 @@ def main():
             display_df = filtered_df.with_columns(
                 [
                     pl.col("keywords").list.join(", ").alias("keywords_str"),
-                    pl.when(pl.col("is_event_dataset") & pl.col("is_frequency_dataset"))
+                    pl.when(pl.col("is_tijdstip_dataset") & pl.col("is_frequency_dataset"))
                     .then(pl.lit("both"))
-                    .when(pl.col("is_event_dataset"))
-                    .then(pl.lit("event"))
+                    .when(pl.col("is_tijdstip_dataset"))
+                    .then(pl.lit("tijdstip"))
                     .otherwise(pl.lit("frequency"))
                     .alias("type"),
                 ]
