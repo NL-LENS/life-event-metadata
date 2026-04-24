@@ -33,7 +33,7 @@ def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
             "frequency": "frequency",
             "samplingProcedure": "sampling_procedure",
             "keywords": "keywords",
-            "isEventDataset": "is_event_dataset",
+            "isTijdstipDataset": "is_tijdstip_dataset",
             "isFrequencyDataset": "is_frequency_dataset",
         },
     )
@@ -55,7 +55,7 @@ def build_datasets_table(con: duckdb.DuckDBPyConnection) -> None:
             frequency,
             keywords,
             sampling_procedure,
-            is_event_dataset,
+            is_tijdstip_dataset,
             is_frequency_dataset
         FROM _datasets_staging
     """)

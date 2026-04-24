@@ -85,11 +85,11 @@ def extract_datasets_metadata() -> pl.DataFrame:
     """Extract CBS datasets with RINPERSOON identifier from ODISSEI KG.
 
     Two queries define the result set:
-    - event datasets: have at least one variable with "tijdstip" in the definition
+    - tijdstip datasets: have at least one variable with "tijdstip" in the definition
     - frequency datasets: published at a qualifying frequency
 
     Every row in the returned DataFrame belongs to at least one category.
-    Boolean flags (isEventDataset, isFrequencyDataset) are set in Python based
+    Boolean flags (isTijdstipDataset, isFrequencyDataset) are set in Python based
     on which query returned each dataset.
     """
     freq_values = ", ".join(f'"{v}"' for v in _FREQUENCY_DATASET_VALUES)
@@ -147,7 +147,7 @@ def extract_datasets_metadata() -> pl.DataFrame:
 
     result_df = result_df.with_columns(
         [
-            pl.col("dataset").is_in(list(event_uris)).alias("isEventDataset"),
+            pl.col("dataset").is_in(list(event_uris)).alias("isTijdstipDataset"),
             pl.col("dataset").is_in(list(freq_uris)).alias("isFrequencyDataset"),
         ],
     )
