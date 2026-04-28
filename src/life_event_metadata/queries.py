@@ -173,8 +173,8 @@ def extract_variables_metadata(dataset_uris: list[str], chunk_size: int = 50) ->
     """Extract variable metadata for the given dataset URIs from the ODISSEI KG.
 
     Queries are chunked to avoid oversized SPARQL requests.
-    Returns a DataFrame with one row per variable, including is_tijdstip flag,
-    count of predicates, and list of tijdstip predicates.
+    Returns a DataFrame with one row per variable, including isTijdstip flag,
+    isPersonIdentifier flag, count of predicates, and list of tijdstip predicates.
     """
     chunks = [dataset_uris[i : i + chunk_size] for i in range(0, len(dataset_uris), chunk_size)]
 
@@ -191,6 +191,7 @@ def extract_variables_metadata(dataset_uris: list[str], chunk_size: int = 50) ->
                (SAMPLE(?validFrom) AS ?validFrom)
                (SAMPLE(?vocabLabel) AS ?vocabLabel)
                (MAX(?isTijdstipRow) AS ?isTijdstip)
+               (MAX(?isPersonIdentifierRow) AS ?isPersonIdentifier)
                (COUNT(DISTINCT ?p) AS ?numPredicates)
                (GROUP_CONCAT(DISTINCT IF(?isTijdstipRow = 1, STR(?p), ""); separator=", ")
                     AS ?tijdstipPredicates)
@@ -208,14 +209,21 @@ def extract_variables_metadata(dataset_uris: list[str], chunk_size: int = 50) ->
                 ?var vi:odisseiVariableVocabularyURI ?vocabURI .
                 ?vocabURI skos:prefLabel ?vocabLabel .
               }}
-             BIND(IF(isLiteral(?o) && CONTAINS(LCASE(STR(?o)), "tijdstip")
-                    && BOUND(?vocabLabel), 1, 0) AS ?isTijdstipRow)
-        }}
-        GROUP BY ?dataset ?var""")
+             OPTIONAL {{
+                ?var vi:odisseiVariableVocabularyURI ?pidVocabURI .
+                ?pidVocabURI skos:broader <{_RINPERSOON_URI}> .
+              }}
+              BIND(IF(isLiteral(?o) && CONTAINS(LCASE(STR(?o)), "tijdstip")
+                      && BOUND(?vocabLabel), 1, 0) AS ?isTijdstipRow)
+              BIND(IF(BOUND(?pidVocabURI), 1, 0) AS ?isPersonIdentifierRow)
+          }}
+         GROUP BY ?dataset ?var""")
         chunk_df = run_query(query)
         if not chunk_df.is_empty():
-            # Convert isTijdstip from 1/0 to boolean (cast to int first in case it's a string)
-            chunk_df = chunk_df.with_columns((pl.col("isTijdstip").cast(pl.Int32) == 1).alias("is_tijdstip"))
+            chunk_df = chunk_df.with_columns(
+                (pl.col("isTijdstip").cast(pl.Int32) == 1).alias("isTijdstip"),
+                (pl.col("isPersonIdentifier").cast(pl.Int32) == 1).alias("isPersonIdentifier"),
+            )
             # Clean up tijdstipPredicates: remove empty strings, keep as list
             chunk_df = chunk_df.with_columns(
                 pl.col("tijdstipPredicates")

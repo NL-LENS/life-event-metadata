@@ -168,6 +168,7 @@ class TestVariablesTable:
             "data_type",
             "definition",
             "is_tijdstip",
+            "is_person_identifier",
             "valid_from",
             "vocab_label",
             "num_predicates",
@@ -230,6 +231,28 @@ class TestVariablesTable:
             ")",
         ).fetchone()[0]
         assert missing == 0, f"{missing} datasets have no variables"
+
+    def test_person_identifiers_exist_in_all_datasets(self, con: duckdb.DuckDBPyConnection):
+        """Every dataset must have at least one person identifier variable.
+
+        Since datasets are selected based on having at least one variable
+        with a vocabulary URI that is a narrower concept of the general
+        Persoon-id (RINPERSOON_URI), every dataset should have at least
+        one variable marked as is_person_identifier=True.
+        """
+        # Check that no dataset has a mean of 0 for is_person_identifier
+        # (i.e., every dataset has at least one person identifier variable)
+        datasets_without_person_id = con.execute(
+            "SELECT COUNT(*) FROM ("
+            "  SELECT dataset_id, AVG(CAST(is_person_identifier AS INTEGER)) as avg_person_id "
+            "  FROM kg_variables "
+            "  GROUP BY dataset_id "
+            "  HAVING avg_person_id = 0"
+            ")",
+        ).fetchone()[0]
+        assert datasets_without_person_id == 0, (
+            f"{datasets_without_person_id} datasets have no person identifier variables"
+        )
 
 
 class TestDataVolume:
