@@ -109,6 +109,44 @@ class TestDatasetsTable:
         ).fetchone()[0]
         assert orphans == 0, f"{orphans} datasets belong to neither category"
 
+    @pytest.mark.parametrize(
+        "dataset_title",
+        [
+            "VEHTAB",
+            "INPATAB",
+            "SPOLISBUS",
+            "GBASCHEIDINGENMASSATAB",
+            pytest.param(
+                "WOZ",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+            pytest.param(
+                "EIGENDOMTAB",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+            pytest.param(
+                "EIGENDOMWOZBAGTAB",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+            pytest.param(
+                "EIGENDOMWOZTAB",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+        ],
+    )
+    def test_specific_datasets_exist(self, dataset_title: str, con: duckdb.DuckDBPyConnection):
+        """Test if specific datasets, via alt_title, are in the database."""
+        res = con.execute("SELECT COUNT(*) FROM kg_datasets WHERE alt_title = ?", (dataset_title,)).fetchone()[0]
+        assert res > 0, f"Dataset {dataset_title} not in database."
+
 
 class TestVariablesTable:
     """Tests for the kg_variables table."""
