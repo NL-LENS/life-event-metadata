@@ -66,7 +66,9 @@ def _datasets_base_metadata_query(extra_filter: str = "", require_frequency: boo
         ?creator citation:authorName ?authorName .
         ?dataset a schema:Dataset .
         ?dataset vi:odisseiVariable ?personVar .
-        ?personVar vi:odisseiVariableVocabularyURI <{_RINPERSOON_URI}> .
+        ?personVar vi:odisseiVariableVocabularyURI ?vocabURI .
+        # Match any concept that is a narrower concept of the general Persoon-id
+        ?vocabURI skos:broader* <{_RINPERSOON_URI}> .
 
         ?dataset dct:alternative ?shortTitle .
         ?dataset dct:title ?title .
@@ -126,7 +128,9 @@ def extract_datasets_metadata() -> pl.DataFrame:
         ?creator citation:authorName ?authorName .
         ?dataset a schema:Dataset .
         ?dataset vi:odisseiVariable ?personVar .
-        ?personVar vi:odisseiVariableVocabularyURI <{_RINPERSOON_URI}> .
+        ?personVar vi:odisseiVariableVocabularyURI ?vocabURI .
+        # Match any concept that is a narrower concept of the general Persoon-id
+        ?vocabURI skos:broader* <{_RINPERSOON_URI}> .
         ?dataset citation:topicClassification ?topicClassNode .
         ?topicClassNode citation:topicClassValue ?kw .
     }}
