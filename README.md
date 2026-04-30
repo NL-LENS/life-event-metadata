@@ -19,15 +19,17 @@ uv sync
 You can create a duckdb database with main metadata around a broad set of datasets
 that could be relevant. Run
 
-```python
+```bash
 python build_database.py
 ```
 
-or ```bash
+or
+
+```bash
 uv run build_database.py
 ```
 
-The resulting database is stored at `./data/event_datasets.duckdb`. 
+The resulting database is stored at `./data/event_datasets.duckdb`.
 
 #### Database content
 
@@ -48,7 +50,7 @@ a required property, while it's an optional property for tijdstip datasets.
 
 The table `kg_variables` contains the metadata on all variables in the
 `kg_datasets` table: data type, description, validity, an indicator of being a
-"tijdstip variable" (`is_tijdstip`, defining a tijdstip dataset). 
+"tijdstip variable" (`is_tijdstip`, defining a tijdstip dataset).
 
 > There is also some metadata about properties on the KG, such as how many predicates the variable has and which predicate determined the value of `is_tijdstip`.
 

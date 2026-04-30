@@ -55,7 +55,7 @@ def _datasets_base_metadata_query(extra_filter: str = "", require_frequency: boo
         freq_pattern = "OPTIONAL { ?dataset ss:frequencyOfDataCollection ?frequency }"
 
     return _CBS_PREFIXES + _inject_prefixes(f"""
-    SELECT DISTINCT ?dataset ?shortTitle ?title ?publicationDate
+    SELECT DISTINCT ?dataset ?shortTitle ?title ?description ?publicationDate
                     ?validFrom ?validUntil ?frequency ?samplingProcedure
     WHERE {{
         VALUES ?authorName {{
@@ -70,6 +70,10 @@ def _datasets_base_metadata_query(extra_filter: str = "", require_frequency: boo
 
         ?dataset dct:alternative ?shortTitle .
         ?dataset dct:title ?title .
+        OPTIONAL {{
+            ?dataset citation:dsDescription ?descNode .
+            ?descNode citation:dsDescriptionValue ?description
+        }}
         OPTIONAL {{ ?dataset dct:issued ?publicationDate }}
         OPTIONAL {{ ?dataset CBS:GeldigVanaf ?validFrom }}
         OPTIONAL {{ ?dataset CBS:GeldigTot ?validUntil }}

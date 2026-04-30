@@ -35,6 +35,7 @@ class TestDatasetsTable:
             "dataset_id",
             "title",
             "alt_title",
+            "description",
             "publication_date",
             "valid_from",
             "valid_until",
