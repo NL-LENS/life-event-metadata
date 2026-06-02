@@ -109,6 +109,44 @@ class TestDatasetsTable:
         ).fetchone()[0]
         assert orphans == 0, f"{orphans} datasets belong to neither category"
 
+    @pytest.mark.parametrize(
+        "dataset_title",
+        [
+            "VEHTAB",
+            "INPATAB",
+            "SPOLISBUS",
+            "GBASCHEIDINGENMASSATAB",
+            pytest.param(
+                "WOZ",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+            pytest.param(
+                "EIGENDOMTAB",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+            pytest.param(
+                "EIGENDOMWOZBAGTAB",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+            pytest.param(
+                "EIGENDOMWOZTAB",
+                marks=pytest.mark.xfail(
+                    reason="coverage bug: https://github.com/NL-LENS/teamnl-events-dataset/issues/5"
+                ),
+            ),
+        ],
+    )
+    def test_specific_datasets_exist(self, dataset_title: str, con: duckdb.DuckDBPyConnection):
+        """Test if specific datasets, via alt_title, are in the database."""
+        res = con.execute("SELECT COUNT(*) FROM kg_datasets WHERE alt_title = ?", (dataset_title,)).fetchone()[0]
+        assert res > 0, f"Dataset {dataset_title} not in database."
+
 
 class TestVariablesTable:
     """Tests for the kg_variables table."""
@@ -130,6 +168,7 @@ class TestVariablesTable:
             "data_type",
             "definition",
             "is_tijdstip",
+            "is_person_identifier",
             "valid_from",
             "vocab_label",
             "num_predicates",
@@ -192,6 +231,28 @@ class TestVariablesTable:
             ")",
         ).fetchone()[0]
         assert missing == 0, f"{missing} datasets have no variables"
+
+    def test_person_identifiers_exist_in_all_datasets(self, con: duckdb.DuckDBPyConnection):
+        """Every dataset must have at least one person identifier variable.
+
+        Since datasets are selected based on having at least one variable
+        with a vocabulary URI that is a narrower concept of the general
+        Persoon-id (RINPERSOON_URI), every dataset should have at least
+        one variable marked as is_person_identifier=True.
+        """
+        # Check that no dataset has a mean of 0 for is_person_identifier
+        # (i.e., every dataset has at least one person identifier variable)
+        datasets_without_person_id = con.execute(
+            "SELECT COUNT(*) FROM ("
+            "  SELECT dataset_id, AVG(CAST(is_person_identifier AS INTEGER)) as avg_person_id "
+            "  FROM kg_variables "
+            "  GROUP BY dataset_id "
+            "  HAVING avg_person_id = 0"
+            ")",
+        ).fetchone()[0]
+        assert datasets_without_person_id == 0, (
+            f"{datasets_without_person_id} datasets have no person identifier variables"
+        )
 
 
 class TestDataVolume:

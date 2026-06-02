@@ -19,9 +19,9 @@ _CBS_PREFIXES = """
 prefix CBS: <https://portal.odissei.nl/schema/CBSMetadata#>
 """
 
-_RINPERSOON_URI = (
-    "https://w3id.org/odissei/cv/cbs/variableThesaurus/"
-    "c650ad27af3f9e2b081c2b2f3698ae9eeb2a502f919b2f220d9f5b29afd6f337e"
-)
+# General concept URI for "Persoon-id" (Person ID) - top-level concept
+# Using skos:broader* with this URI captures all narrower concepts including
+# various RINPERSOON variants (RINPERSOON, RINPERSOONHKW, RINPERSOONSHKW, etc.)
+_RINPERSOON_URI = "https://w3id.org/odissei/cv/cbs/variableThesaurus/v0b01e41080202085"
 
 _FREQUENCY_DATASET_VALUES = ("Jaar", "Kalenderjaar", "Niet eenduidig", "Stand", "Maand", "Studiejaar", "Schooljaar")

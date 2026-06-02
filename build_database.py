@@ -88,6 +88,8 @@ def build_variables_table(con: duckdb.DuckDBPyConnection) -> None:
             "vocabLabel": "vocab_label",
             "numPredicates": "num_predicates",
             "tijdstipPredicates": "tijdstip_predicates",
+            "isTijdstip": "is_tijdstip",
+            "isPersonIdentifier": "is_person_identifier",
         },
     )
 
@@ -107,7 +109,8 @@ def build_variables_table(con: duckdb.DuckDBPyConnection) -> None:
             num_predicates,
             tijdstip_predicates,
             TRY_CAST(valid_from AS DATE) AS valid_from,
-            is_tijdstip
+            is_tijdstip,
+            is_person_identifier
         FROM _variables_staging
     """)
     con.unregister("_variables_staging")
