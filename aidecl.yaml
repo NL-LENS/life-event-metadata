@@ -1,0 +1,35 @@
+# AI Declaration Format (aidecl)
+# Use a role or team name rather than personal name if this file will be public
+
+schema_version: 1.0.0
+project:
+  name: teamnl-events-dataset
+  repository: git@github.com:NL-LENS/teamnl-events-dataset.git
+  content_type: software
+ai_usage:
+  used: true
+  summary: |
+    AI was used to explore the knowledge graph, build the
+    SPARQL queries, and to build the streamlit app.
+  level: extensive
+  code_proportion:
+    ai_generated_percent: 95
+    human_generated_percent: 5
+  tools:
+    - name: Opencode
+      vendor: Opencode Zen
+      type: agent
+      model: Kimi K2.7
+      purpose:
+        - Code generation for SPARQL queries and streamlit app
+    - name: Claude Code
+      vendor: Anthropic
+      type: agent
+      model: Opus 4.7
+      purpose:
+        - Explore the knowledge graph
+  scope:
+    code_completion: true
+declaration:
+  date: '2026-07-20'
+  declared_by: Main developer
