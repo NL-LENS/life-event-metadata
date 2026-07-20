@@ -1,5 +1,12 @@
 # teamnl-events-dataset
-Repository to coordinate work around the creation of an event-based dataset in the CBS ME
+
+Fetch data on event datasets from CBS in the Odissei Knowledge Graph (KG).
+Explore data in a streamlit app.
+
+*Note*: This repository is a proof of concept but not actively developed
+at the moment. The app is vibe-coded and does not show all data correctly
+(number of datasets is not reported correctly).
+For the ground truth, inspect the database directly.
 
 ## Installation
 
@@ -13,6 +20,7 @@ or
 ```bash
 uv sync
 ```
+
 
 ### Building the database
 
@@ -30,6 +38,11 @@ uv run build_database.py
 ```
 
 The resulting database is stored at `./data/event_datasets.duckdb`.
+
+You can explore the data with
+```
+streamlit run streamlit/app.py
+```
 
 #### Database content
 
@@ -85,3 +98,9 @@ Install development version of the package:
 ```
 python -m pip install -e ".[dev]"
 ```
+or
+```
+uv sync --extra dev
+```
+
+The AI usage is documented in [aidecl.yaml](./aidecl.yaml).
