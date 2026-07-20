@@ -34,13 +34,16 @@ dependencies = [
     "sparqlwrapper",
     "pytest",
     "tqdm",
+    "matplotlib",
+    "streamlit",
+    "plotly",
 ]
 description = "Harvest Odissei Knowledge Graph for metadata of life events in CBS registry data"
 keywords = ["cbs","metadata"]
 license = {file = "LICENSE"}
 name = "life_event_metadata"
 readme = {file = "README.md", content-type = "text/markdown"}
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 version = "0.0.1"
 
 [project.optional-dependencies]
@@ -111,6 +114,7 @@ pydocstyle.convention = "numpy"
 "notebooks/*ipynb" = [
     "T201", # print found
     "E501", # line too long
+    "S608", # possible SQL injection
 ]
 
 
@@ -127,3 +131,11 @@ filename = "src/life_event_metadata/__init__.py"
 
 [[tool.bumpversion.files]]
 filename = "pyproject.toml"
+
+[tool.uv.sources]
+aidecl = { git = "https://github.com/ai-declaration/cli.git" }
+
+[dependency-groups]
+dev = [
+    "aidecl",
+]

@@ -8,3 +8,4 @@ __pycache__/
 
 # Ignore DS_Store files on macOS
 .DS_Store
+opencode.config
