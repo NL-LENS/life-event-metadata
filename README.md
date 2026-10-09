@@ -1,4 +1,4 @@
-# teamnl-events-dataset
+# life-event-metadata
 
 Fetch data on event datasets from CBS in the Odissei Knowledge Graph (KG).
 Explore data in a streamlit app.
