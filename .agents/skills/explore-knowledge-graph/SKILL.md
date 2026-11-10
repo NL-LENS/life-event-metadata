@@ -1,9 +1,9 @@
 ---
 name: explore-knowledge-graph
-description: Explore the Odissei knowledge graph. Use when user asks
-about content of the knowledge graph or is building queries on the knowledge graph.
+description: |
+   Explore the Odissei knowledge graph. Use when the user asks about the content 
+   of the knowledge graph or is building queries against it.
 ---
-
 
 # Explore knowledge graph
 
