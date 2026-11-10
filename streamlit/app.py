@@ -68,6 +68,7 @@ def load_variables():
         SELECT
             dataset_id,
             variable_name,
+            label_,
             is_tijdstip,
             data_type,
             description,
@@ -660,7 +661,7 @@ def main():
                             "🔍 Search variables",
                             placeholder="e.g., SVO or geboorte",
                             key=f"var_search_{dataset_id}",
-                            help="Search by variable name. Case-insensitive.",
+                            help="Search by variable name or label. Case-insensitive.",
                         )
 
                         # Prepare variables display
@@ -672,10 +673,13 @@ def main():
                                 .alias("is_timestamp"),
                                 # Format valid_from as date only (no time)
                                 pl.col("valid_from").dt.strftime("%Y-%m-%d").alias("valid_from"),
+                                # Human-readable variable label (e.g. the parent role in KINDOUDERTAB)
+                                pl.col("label_").fill_null("").alias("label"),
                             ]
                         ).select(
                             [
                                 "variable_name",
+                                "label",
                                 "description",
                                 "data_type",
                                 "valid_from",
@@ -688,6 +692,9 @@ def main():
                             search_lower = var_search.lower()
                             vars_display = vars_display.filter(
                                 pl.col("variable_name")
+                                .str.to_lowercase()
+                                .str.contains(search_lower, literal=True, strict=False)
+                                | pl.col("label")
                                 .str.to_lowercase()
                                 .str.contains(search_lower, literal=True, strict=False)
                             )
