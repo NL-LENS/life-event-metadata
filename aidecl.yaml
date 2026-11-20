@@ -3,8 +3,8 @@
 
 schema_version: 1.0.0
 project:
-  name: teamnl-events-dataset
-  repository: git@github.com:NL-LENS/teamnl-events-dataset.git
+  name: life-event-metadata
+  repository: git@github.com:NL-LENS/life-event-metadata.git
   content_type: software
 ai_usage:
   used: true
